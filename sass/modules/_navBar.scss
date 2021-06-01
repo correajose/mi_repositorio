@@ -1,0 +1,54 @@
+@import "mixins";
+
+.navBar {
+    // background-color: #211DE2;
+    grid-area: sideBar;
+    color: whitesmoke;
+    font-weight: 900;
+    text-shadow: .1rem .1rem 0 map-get($palette,mydarkblue);
+    text-align: center;
+
+    .navBar__navList {
+        list-style: none;
+
+        li {
+            border: .5rem outset;
+
+            &:hover {
+                background-color: whitesmoke;
+                color: map-get($palette,mydarkblue);
+                text-shadow: none;
+            }
+        }
+        
+        a {
+            display: inline-block;
+            width: 100%;
+        }
+
+        #productsTab {
+
+            #desplegableCategories {
+            
+                li {
+                    color: map-get($palette,mydarkblue);
+                    text-shadow: .1rem .1rem 0 whitesmoke;
+
+                    &:hover {
+                        background-color: map-get($palette, mydarkblue);
+                        color: whitesmoke;
+                        text-shadow: none;
+                    }
+                }
+            }
+
+            a {
+                display: inline-block;
+                width: 100%;
+            }
+
+            
+        }
+    }
+
+}

@@ -1,0 +1,8 @@
+@import "mixins";
+
+footer {
+    // width: 100%;
+    grid-area: footer;
+    background-color: gray;
+    padding: .5rem .8rem;
+}

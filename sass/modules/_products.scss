@@ -1,0 +1,61 @@
+@import "mixins";
+
+//PÁGINA PRODUCTS
+section#tshirts {
+
+    .tshirts__grid {
+        display: none;
+    }
+
+    &:target > .tshirts__grid {
+        padding: 0 3rem;
+        display: grid;
+        grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr;
+        grid-template-areas: "1 2" "3 4" "5 6" "7 8";
+        row-gap: 3rem;
+        column-gap: 3rem;
+        margin: 1rem 0 1.6rem;
+
+        @for $i from 1 through 8 {
+            img:nth-child(#{$i}) {
+                grid-area: #{$i};
+            }
+
+        }
+
+        .tshirts__grid__itemViewBox {
+            text-align: center;
+            a {
+                
+                img {
+                    width: 100%;
+                    display: inline-block;
+                        
+                }
+            }
+
+            .tshirts__grid__itemViewBox__title {
+                display: block;
+                font-weight: 500;
+                font-style: italic;
+                font-size: 1.6rem;
+                color: whitesmoke;
+                margin: .5rem 0;
+            }
+
+            .tshirts__grid__itemViewBox__price {
+                display: inline-block;
+                font-weight: 500;
+                font-style: italic;
+                font-size: 1.6rem;
+                color: whitesmoke;
+            }
+
+            .button--green {
+               background-color: map-get($palette,myyellow);
+           }
+            
+        }
+    }
+    
+}

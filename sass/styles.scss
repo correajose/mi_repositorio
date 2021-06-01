@@ -1,0 +1,250 @@
+@import "modules/body";
+@import "modules/footer";
+@import "modules/forms";
+@import "modules/header";
+@import "modules/main";
+@import "modules/navBar";
+@import "modules/sideBar";
+@import "modules/table";
+@import "modules/text";
+@import "modules/newsletter";
+@import "modules/products";
+@import "modules/productsView";
+@import "modules/mixins";
+
+
+// ESTILOS GENERALES
+html {
+    font-size: 62.5%;
+    // font-family: 'Roboto', sans-serif;
+    width: 100%;
+    height: 100vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+hr { display: none;}
+
+button {
+    background: unset;
+    border: unset;
+    color: unset;
+    align-content: center;
+}
+
+a { 
+    color: inherit;
+    text-decoration: none;
+    font-style: normal;
+
+    &:hover {
+        color: unset;
+        text-decoration: unset;
+    }
+}
+
+.icon {
+    height: 2rem;
+    width: 2rem;
+}
+
+.button {
+    @include button;
+}
+
+
+@media screen and (min-width: 768px) {
+
+    // .borderBox {
+    //     border-left: solid .1rem map-get($palette, mydarkblue );
+    //     border-right: solid .1rem map-get($palette, mydarkblue );
+    //     margin: 0 .8rem;
+    //     padding: 1rem;
+    // }
+
+    body {
+        display: grid;
+        grid-template: 20vh auto auto auto 14vh / 1.2fr repeat(3,1fr);
+        grid-template-areas: "header header header header"
+                             "sideBar main main main"
+                             "sideBar main main main"
+                             "sideBar main main main"
+                             "footer footer footer footer";
+    }
+
+    header {
+        display: inherit;
+        align-items: unset;
+
+        .header__logo {
+            width: 30%;
+        }
+    }
+
+    .sideBar {
+        min-height: 66vh;
+        font-size: 4rem;
+        line-height: 5rem;
+        text-align: left;
+        padding: 1rem 2.5rem 1rem 5rem;
+
+        .sideBar__navList {
+
+            li{
+                border: 0;
+                list-style-image: url(../img/spark.gif);
+                width: fit-content;
+
+                &:hover {
+                    background-color: whitesmoke;
+                    color: map-get($palette,mydarkblue);
+                    text-shadow: none;
+                }
+            }
+
+            a {
+                display: inline;
+            }
+
+            #productsTab {
+
+                #desplegableCategories {
+                    // padding-left: 1.5rem;
+
+                    li { 
+                        list-style: none;
+                        font-family: serif;
+                        width: auto;
+
+                        &:hover {
+                            background-color: map-get($palette,mydarkblue);
+                            color: whitesmoke;
+                            text-shadow: none;
+                        }
+
+                        &:not(:first-of-type) {
+                            border-top: 0.1rem solid map-get($palette, mydarkblue);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+        min-height: 66vh;
+    }
+
+    .popUpOuter {
+        .popUpInner {
+            background-size: 70vh;
+            width: 70vh;
+            height: 70vh;
+
+            #popUpInner__closeButtonContainer{
+
+                .closed {
+                    height: 2rem;
+                    width: 2rem;
+                    font-size: 2rem;
+                }
+            }
+
+            #popUpInner__newsletterContainer {
+                padding-bottom: 27%;
+
+                .modal-title{
+                    font-size: 1.6rem;                }
+            }
+        }
+    }
+
+    footer {
+        background: none;
+    }
+
+    h1 {
+        font-size: 5.5rem;
+    }
+
+    .navBar {
+        position: relative;
+        padding: 2rem 1.3rem;
+
+        .navBar__navList {
+            display: flex;
+            flex-flow: column nowrap; 
+            justify-content: space-between;
+
+             li {
+                font-size: 1.6rem;
+                text-align: left;
+                border: double .4rem map-get($palette, mydarkblue );
+                margin: .2rem;
+
+                &:target {
+                    position: relative;
+                    left: 4rem;
+                    transform: scale(1.2);
+                    z-index: 9999;
+                    background-color: whitesmoke;
+                    color: map-get($palette, mydarkblue );
+                    text-shadow: none;
+                }
+             }
+        }
+    }
+
+    #prodCategories {
+
+        #tshirts {
+
+            margin: 0 1rem 5rem;
+
+            &:target > .tshirts__grid {
+                padding: 0 3rem;
+                display: grid;
+                grid-template: repeat(3,1fr) / repeat(3, 1fr);
+                @for $n from 1 to 3 {
+                    $n: #{$n}*3;
+                    grid-template-areas: "#{$n}-2 #{$n}-1 #{$n}";
+                }
+            }
+
+            .tshirts__grid {
+
+                .tshirts__grid__itemViewBox {
+
+                    a {
+                        img {
+                            width: 40%;
+                        }
+                    }
+
+                    /* .tshirts__grid__itemViewBox__title {
+
+                    }
+
+                    .tshirts__grid__itemViewBox__price {
+
+                    }
+
+                    .button {
+
+                    } */
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+
+
+
+}

@@ -1,0 +1,10 @@
+@import "mixins";
+
+body {
+    width: 100%;
+    height: auto;
+    // font-family: 'Roboto', sans-serif;
+    // background: #e21d7ca1;
+    background: linear-gradient(to bottom, #e21d7c,#e089b3,#e21d7c);
+    // background-repeat: round;
+}

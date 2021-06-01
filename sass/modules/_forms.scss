@@ -1,0 +1,57 @@
+@import "mixins";
+
+form.search {
+    display: inline-block;
+    height: 15px;
+
+    .searchText {
+        background: none;
+        border: none;
+        outline: none;
+        color: black;
+        font-size: 1.5rem;
+        padding: 2px;
+        width: 0;
+    }
+
+    &:hover > .searchText {
+        transition: .3s;
+        width: 177px;
+    }
+
+
+
+}
+
+// FORMULARIO DE CONTACTO
+    #textInputs input, #textInputs textarea, #reason {
+        font-size: 1.6rem;
+        background: black;
+        color: whitesmoke;
+        padding: 2px;
+        width: 20%;
+    }
+
+    #reason:invalid{ color: gray;  } /*estilo de placeholder para select*/
+
+    textarea {
+        height: 6rem;
+        resize: none;
+        font-family: inherit;
+        height: 10rem;
+    }
+
+    #checkAndButtons label, #checkAndButtons input {
+        font-size: 1.6rem;
+        font-weight: 400;
+        background: black;
+        border: none;
+        color: whitesmoke;
+        padding: 2px;
+    }    
+
+    .contactForm span { /*espaciado entre inputs*/
+        display: block;
+        margin: 10px 0;
+    }
+//

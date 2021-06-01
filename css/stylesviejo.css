@@ -1,0 +1,631 @@
+/* HOJA DE ESTILOS PROYECTO E-SHOP INDUMENTARIA-CORREA */
+
+/* ESTILOS 0 */
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+
+    html {
+        width: 100%;
+        height: auto;
+        font-family: 'Roboto', sans-serif;
+        font-size: 62.5%;
+    }
+
+    header, nav, main, footer{
+        width: 100%;
+    }
+
+    a { text-decoration:none; font-style:normal; }
+
+    hr {display: none; }
+
+    #logoBox { grid-area: logoBox; }
+    header { grid-area: header; }
+    .navBar { grid-area: navBar;}
+    #menuSideBar { grid-area: menuSideBar;}
+    main { grid-area: main;}
+    footer { grid-area: footer;}
+
+
+/* ESTILO BODY */    
+    body, #homeBody {
+        display: grid;
+        width: 100vw;
+        min-height: 795px;
+        position: relative;
+        color:rgb(0, 206, 27);
+        background: url(../img/background.gif);
+    }
+
+    #homeBody { 
+        height: 795px;
+        display: grid;
+    }
+
+
+/* ESTILO HEADER */
+    header {
+        background: rgba(255, 99, 71, 0.795);
+        background:  linear-gradient(to bottom, rgb(255, 99, 71),rgba(255, 99, 71, 0.849),rgba(255, 99, 71, 0));
+        padding: .8rem;
+        display: flex;
+        flex-flow: row nowrap;
+        align-content: center;
+    }    
+
+
+    /* ESTILO SEARCH FORM*/
+        .search{display: inline-block; }
+
+        .searchText {
+            background: none;
+            border: none;
+            outline: none;
+            color: black;
+            font-size: 1.5rem;
+            padding: 2px;
+            width: 0;
+        }
+
+
+/* BARRA DE NAVEGACION */
+    .navBar{
+        width: 100%;
+        min-height: 23.85px;
+        padding: 2px 0;
+        position: sticky;
+        top: 0; 
+        font-weight: 400;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        text-align: center;
+        background-color: rgb(0, 0, 0);
+        color: whitesmoke;   
+    }
+
+    .navBar li{
+        list-style: none;
+        display: inline;
+        position: relative;
+    }
+
+    .navBar a{
+        text-decoration: none;
+        color: whitesmoke;
+        display: inline-block;
+        width: 19%;
+        padding: 0;
+    }
+
+
+        /* SUBMENU DESPLEGABLE DE PRODUCTS */
+        #desplegableCategories {
+            width: 100%;
+            display: none;
+            position: absolute;
+            z-index: 1;
+        }
+
+        #desplegableCategories a {
+            display: inline-block;
+            padding: 0;
+            width: 100%;
+        }
+
+        #desplegableCategories li{
+            display: block;
+        }
+
+
+
+/* MAINBOX */
+    main {
+        font-weight: normal;
+        min-height: 612.15px;
+        /* padding: 10px 45px; */
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+    }
+
+    /* ORGANIZACION CONTENIDO EN MAIN */
+
+        /* MENU DE NAVEGACION HOMEPAGE */
+
+            #menuSideBar {
+                overflow: hidden;
+                background-color: rgba(0, 0, 0, 0.952);
+                padding: 0 45px;
+            }
+
+            #navList{
+                padding: 0px 30px;
+                font-weight: 900;
+                font-size: 2.2rem;
+                line-height: 2.5rem;
+                list-style-image: url(../img/spark.gif);
+            }
+
+            #navList a {color: whitesmoke;}
+            
+            .pageTitle { display: flex; flex-flow: row wrap;}
+
+            .pageTitle h1{
+                width: max-content;
+                font-style: normal;
+                font-weight: 900;
+                font-size: 4.5rem;
+                text-shadow: 2px 2px 2px yellow;
+            }
+        
+            .pageSubtitle {
+                width: max-content;
+                font-style: italic;
+                font-weight: 700;
+                font-size: 3.5rem;
+                text-shadow: 2px 2px 2px yellow;
+            }
+
+
+        /* ESTILO IMAGENES HOMEPAGE */
+
+            #imageCloud {
+                height: 58%;
+                padding: 15px 0;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-around;
+            }
+           
+            #interactiveImages{
+                flex-basis: 49%;
+                height: auto;
+                z-index: auto;
+                position: relative;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: flex-start;
+                /* align-content: center; */
+            }
+            
+            #interactiveImages img{
+                border: groove 0.6rem blue;
+                position: absolute;
+                margin: 45px;
+            }
+
+            #interactiveImages img#st { left: 0%;}
+            #interactiveImages img#nd { left: 18%;}
+            #interactiveImages img#rd { left: 36%;}
+            #interactiveImages img#th { left: 54%;}
+
+
+
+/* ESTILO FOOTER */
+    footer {
+        background-color: rgb(167, 167, 167);
+        position: relative;
+        bottom: 15px;
+        height: 100%;
+        padding: 10px 15px;
+        font-size: 12px;
+        font-weight: lighter;
+    }
+
+    footer a {color: black;}
+
+    .iconSize {
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+
+    .iconSize img{
+        width: 1.5rem;
+    }
+
+
+/* CATEGORIAS PAGINA PRODUCTS */
+
+    #categoriesBar {
+        list-style: none;
+        display: inline-flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        font-weight: 100;
+        font-size: 2rem;
+        height: 24px;
+    }
+
+    #categoriesBar li {
+        display: inline-block;
+        
+    }
+
+    #categoriesBar a {
+        padding: 1px 25px;
+        background-color: rgb(241, 0, 50);
+        color:whitesmoke;
+    }
+
+    /* div#prodCategories {
+        min-height: 534.55px ;
+    } */
+
+    #prodCategories #tshirts {
+        min-height: 534.55px ;
+        padding: 30px;
+        display: grid;
+        grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+        column-gap: 30px;
+        row-gap: px;
+        justify-items: center;
+        align-items: center;
+
+    }
+
+    #prodCategories #tshirts a{
+        font-size: 0;
+        display: inline-block;
+        width: 55%;
+        box-shadow: 4px 4px 4px rgba(128, 128, 128, 0.644);
+    }
+
+    #prodCategories #tshirts img{
+        display: inline-block;
+        width: 100%;
+    }
+
+    #prodCategories section {
+        display: none;
+    }
+
+    #prodCategories section:target {
+        display: block;
+    }
+
+
+/* TABLA TALLES PRODUCTOS */
+    .sizesTable {
+        table-layout:fixed;
+        border: 7px solid rgba(54, 54, 54, 0.877);
+        font-weight: 500;
+        text-align: center;
+    }
+
+    .sizesTable th { 
+        padding: 5px;
+        color:yellow;
+        font-weight:normal;
+    }
+
+    .sizesTable tr:nth-child(odd) { background-color: rgba(137, 43, 226, 0.877);}
+    
+    .sizesTable tr:nth-child(even) { background-color: rgba(248, 83, 207, 0.87);}
+
+
+/* ESTILO TEXTOS LARGOS */
+    .extenseText {
+        padding: 0 8px;
+        color: rgb(15, 15, 15);
+        font-size: 1.5rem;
+        font-weight: 400;
+        text-align: justify;
+        list-style-position: inside;
+        background: rgba(245, 245, 245, 0.938);
+    }
+
+    .extenseText p {
+        padding: 3px 0;
+    }
+
+    .extenseText p::selection, .extenseText li::selection {
+        background-color: rgb(241, 0, 50, 0.78);
+    }
+
+
+
+/* ESTILOS FORMULARIO DE CONTACTO */
+    #textInputs input, #textInputs textarea, #reason {
+        font-size: 1.6rem;
+        background: black;
+        color: whitesmoke;
+        padding: 2px;
+        width: 20%;
+    }
+
+    #reason:invalid{ color: gray;  } /*estilo de placeholder para select*/
+
+    textarea {
+        height: 6rem;
+        resize: none;
+        font-family: inherit;
+        height: 10rem;
+    }
+
+    #checkAndButtons label, #checkAndButtons input {
+        font-size: 1.6rem;
+        font-weight: 400;
+        background: black;
+        border: none;
+        color: whitesmoke;
+        padding: 2px;
+    }    
+    
+    .contactForm span { /*espaciado entre inputs*/
+        display: block;
+        margin: 10px 0;
+    }
+
+
+/* ANIMACIONES-TRANSICIONES */
+        .search:hover > .searchText {
+            transition: .3s;
+            width: 177px;
+        }
+
+        .navBar a:hover { /*animacion anchors navBar*/
+            transition: .3s;
+            background-color: whitesmoke;
+            color: black;
+        }
+
+        #navList a:hover{ /*animacion anchors menu home*/
+            transition: .3s;
+            background-color: rgb(241, 0, 50);
+            color: whitesmoke;
+        }
+
+        #interactiveImages img:hover{ /*imagenes de la homepage se agrandan y pasan al frente*/
+            transition: .8s;
+            z-index: 1;
+            margin: 0;
+        }
+
+        .navBar #productsTab:hover #desplegableCategories{ /*submenu desplegable de productos*/
+            transition: 0.5s;
+            display: block;
+            width: 100%;
+            top: 0px;
+            right: 2px;
+            background-color: black;
+            color: whitesmoke;
+        }  
+
+
+/* POPUP */
+
+.popUpContainer{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(65, 65, 65, 0.527);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+.popUp {
+    display: flex;
+    flex-flow: column nowrap;
+    border: solid 10px rgb(114, 114, 114);
+    background: url(../img/popupbg.jpg);
+    background-size: 40vw;
+    position: absolute;
+    z-index: 999999999999999;
+    width: 40vw;
+    height: 40vw;
+    left: 30%;
+    top: 10%;
+}
+
+    /* ESTILO Y POSICION CROSS ICON */
+    #crossIconContainer {
+        display: flex;
+        flex-flow: row;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding: 5px;
+    }
+
+    #crossIconContainer img {width: 20px; height: 20px;}
+
+
+    /* ESTILO Y POSICION NEWSLETTER FORM */
+    #newsletterContainer {
+        display: flex;
+        flex-flow: row;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 25px;
+    }
+    #newsletter {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(31, 31, 31, 0.87);
+        width: 35vw;
+        font-size: 2rem;
+        font-weight: 500;
+        text-shadow: 2px 2px 2px rgb(124, 124, 0);
+        padding: 8px 0;
+    }
+
+    #newsletter form {
+        display: flex;
+        flex-flow: row nowrap;
+        width: 100%;
+        padding: 3px 5px;
+        justify-content: center;
+    }
+
+    #newsletter form input:nth-child(1){ width: 80%;}
+    #newsletter form input:nth-child(2){ width: 20%;}
+
+    .popUpContainer:target {
+        display: none;
+    }
+
+
+
+/* PAGINA PRODUCT VIEW */
+
+#productViewPageMain {
+    color: black;
+    font-weight: 400;
+    font-size: 2.5rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 45px;
+}
+
+#itemImg { width: 50%;}
+
+#purchaseInterface { width: 50% ;}
+
+#itemImg span {
+    display: none;
+}
+
+#itemImg span:target {
+    display: inline-block;
+}
+
+#itemImg img {
+    width: 90%;
+}
+
+#purchaseInterface label {
+    font-weight: 400;
+    font-size: .5rem;
+    color: whitesmoke;
+    background-color: black;
+    padding: 3px;
+}
+
+#purchaseInterface input {
+    font-weight: 400;
+    font-size: 1rem;
+    color: whitesmoke;
+    background-color: rgb(0, 0, 0);
+    padding: 3px;
+    border: none;
+}
+
+#purchaseInterface input#buy { background-color: rgb(0, 206, 27); }
+
+#purchaseInterface #description {
+    font-size: 1.3rem;
+    background-color: rgba(245, 245, 245, 0.87);
+    padding: 3px;
+    text-align: justify;
+}
+
+#purchaseInterface {
+    padding-top: 25px;
+}
+
+
+
+/* MEDIA QUERIES */
+
+@media only screen and (min-width: 320px) {
+    body, #homeBody {
+        grid-template:  "logoBox logoBox logoBox" fit-content(100%) 
+                        "header header header" fit-content(100%) 
+                        "menuSideBar menuSideBar menuSideBar" 140px
+                        "main main main" auto 
+                        "footer footer footer" 63.6px / 1fr ;
+    }
+
+    #logo {
+        width: 100%;
+    }
+
+    #logoBox a { width: 60%;}
+
+    #logoBox {
+        padding: .8rem;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header {
+        background: initial;
+        justify-content: center;
+    }
+
+    header a, #searchButton{ 
+        width: 1.5rem;
+        margin: 0 3px;
+    }
+
+    header img { width: 100%; }
+
+    header p {
+        display: inline-block;
+        color: black;
+        font-weight: 100;
+        font-size: 1.5rem;
+        margin: 0 8px;
+    }
+
+    .pageSubtitle { display: none;}
+
+    #menuSideBar {
+        background: none;
+        padding: 0;
+    }
+
+    #navList {
+        color: whitesmoke;
+        padding: 0;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        list-style: none;
+        text-align: center;
+    }
+
+    #navList a {
+        display: block;
+        background-color: black;
+        width: 100%;
+    }
+
+    #navList h4:hover{ /*animacion anchors menu home*/
+        transition: .3s;
+        background-color: rgb(241, 0, 50);
+        color: whitesmoke;
+    }
+
+
+}
+
+@media only screen and (min-width: 720px) {
+
+
+
+    
+}
+
+@media only screen and (min-width: 1200px) {
+    body, #homeBody {
+        grid-template:  "logoBox header header" 95.4px 
+                        "menuSideBar navBar navBar" 23.85px 
+                        "menuSideBar main main" 63.6px
+                        "menuSideBar main main" auto 
+                        "footer footer footer" 63.6px / 25% 1fr 1fr ;
+    }
+
+    header {
+        height: 100%;
+        justify-items: end;
+        align-items: center;
+    } 
+}

@@ -1,0 +1,48 @@
+@import "mixins";
+
+main {
+    width: 100%;
+    grid-area: main;
+}
+
+.mainHome {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+
+    .main__featured {
+        width: 100%;
+        display: flex;
+        flex-flow: row;
+        overflow: hidden;
+
+        &:hover > span {animation-play-state: paused;}
+        
+        span{
+        animation: marquee 10s infinite linear;
+        
+        }
+
+        @keyframes marquee {
+            0% {transform: translate(400%, 0);}
+            100% {transform: translate(-1600%, 0); }
+        }
+
+
+        span {
+            display: inline-block;
+            width: 25%;
+            padding: 0 5rem;
+        }
+
+        img {
+            display: inline-block;
+            width: 100%;
+            // transform: rotate(-5deg);
+        }
+        
+
+    }
+} 
+
