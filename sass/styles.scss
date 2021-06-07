@@ -4,7 +4,7 @@
 @import "modules/header";
 @import "modules/main";
 @import "modules/navBar";
-@import "modules/sideBar";
+@import "modules/nav";
 @import "modules/table";
 @import "modules/text";
 @import "modules/newsletter";
@@ -70,15 +70,15 @@ a {
         display: grid;
         grid-template: 20vh auto auto auto 10vh / 1.2fr repeat(3,1fr);
         grid-template-areas: "header header header header"
-                             "sideBar main main main"
-                             "sideBar main main main"
-                             "sideBar main main main"
+                             "homeNav main main main"
+                             "homeNav main main main"
+                             "homeNav main main main"
                              "footer footer footer footer";
     }
 
     header {
         display: inherit;
-        align-items: unset;
+        align-items: center;
 
         .header__logo {
             width: 30%;
@@ -86,14 +86,14 @@ a {
         }
     }
 
-    .sideBar {
+    .nav {
         min-height: 66vh;
         font-size: 4rem;
         line-height: 5rem;
         text-align: left;
         padding: 1rem 2.5rem 1rem 5rem;
 
-        .sideBar__navList {
+        .nav__list {
 
             li{
                 border: 0;

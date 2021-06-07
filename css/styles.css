@@ -1,11 +1,12 @@
 body {
   width: 100%;
   height: auto;
-  background: linear-gradient(to bottom, #e21d7c, #e089b3, #e21d7c); }
+  background: whitesmoke; }
 
 footer {
   grid-area: footer;
-  background-color: gray;
+  background-image: url(../img/race-flag.png);
+  background-size: 100%;
   padding: .5rem .8rem; }
 
 form.search {
@@ -55,29 +56,28 @@ textarea {
 
 header {
   grid-area: header;
-  display: inline-flex;
+  height: 4rem;
+  background-color: #E21D7B;
+  display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   margin: 0; }
   header .header__logo {
-    width: 60%;
     padding: .5rem;
     /* background: radial-gradient(#ebebe6,map-get($palette,myred)); */
-    box-shadow: 0 1.5rem .5rem #3f0823bd;
-    border-radius: 50% 50%;
-    margin: .5rem;
-    padding: auto 0;
     display: flex;
     flex-flow: row;
     justify-content: center;
-    animation: bounce 1.5s cubic-bezier(0.37, 0.01, 0.63, 1) infinite; }
-    header .header__logo #logo {
-      width: 80%; }
+    animation: bounce 1.5s cubic-bezier(0.37, 0.01, 0.63, 1) infinite;
+    /* #logo {
+            width: 80%;
+        } */ }
   header div.header__icons {
     padding: .8rem 0;
     height: 100%;
     display: flex;
+    display: none;
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: center; }
@@ -85,20 +85,23 @@ header {
       position: absolute; }
     header div.header__icons .searchButton {
       position: absolute; }
+  header #hamMenuIcon {
+    position: absolute; }
 
 @keyframes bounce {
   0% {
-    transform: translate(0, -0.2rem); }
+    transform: translate(0, -0.1rem); }
   50% {
-    transform: translate(0, 0.2rem); }
+    transform: translate(0, 0.1rem); }
   100% {
-    transform: translate(0, -0.2rem); } }
+    transform: translate(0, -0.1rem); } }
 
 main {
   width: 100%;
   grid-area: main; }
 
 .mainHome {
+  height: auto;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
@@ -120,11 +123,11 @@ main {
     transform: translate(-1600%, 0); } }
     .mainHome .main__featured span {
       display: inline-block;
-      width: 25%;
-      padding: 0 5rem; }
+      width: auto;
+      padding: 0 1rem; }
     .mainHome .main__featured img {
       display: inline-block;
-      width: 100%; }
+      width: 7rem; }
 
 .navBar {
   grid-area: sideBar;
@@ -154,25 +157,41 @@ main {
       display: inline-block;
       width: 100%; }
 
-.sideBar {
-  width: auto;
+.nav {
+  position: absolute;
+  top: 4rem;
+  padding: 0 1.5rem;
+  width: 100%;
+  height: 100vh;
   grid-area: sideBar;
-  color: whitesmoke;
+  background-color: whitesmoke;
+  color: #1DE284;
+  font-size: 2rem;
   font-weight: 900;
-  text-shadow: 2px 2px 0 #100f7a;
-  text-align: center; }
-  .sideBar .sideBar__navList {
-    list-style: none; }
-    .sideBar .sideBar__navList li {
-      border: .5rem outset;
+  text-shadow: 2px 2px 0 #DEE21D;
+  text-align: left; }
+  .nav .nav__list {
+    list-style: none;
+    width: 100%; }
+    .nav .nav__list li {
+      padding: .5rem 0;
+      width: 100%;
+      text-align: justify;
       text-transform: uppercase; }
-      .sideBar .sideBar__navList li:active {
+      .nav .nav__list li:not(:first-of-type) {
+        border-top: 0.1rem solid #1DE284; }
+      .nav .nav__list li:active {
         background-color: whitesmoke;
         color: #100f7a;
         text-shadow: none; }
-    .sideBar .sideBar__navList #productsTab #desplegableCategories li {
-      text-transform: lowercase; }
-    .sideBar .sideBar__navList a {
+    .nav .nav__list a {
+      width: 100%; }
+    .nav .nav__list #productsTab #desplegableCategories {
+      list-style: none;
+      background-color: rgba(233, 233, 233, 0.603); }
+      .nav .nav__list #productsTab #desplegableCategories li {
+        text-transform: lowercase; }
+    .nav .nav__list a {
       display: inline-block;
       width: 100%; }
 
@@ -403,38 +422,38 @@ a {
   body {
     display: grid;
     grid-template: 20vh auto auto auto 10vh/1.2fr repeat(3, 1fr);
-    grid-template-areas: "header header header header" "sideBar main main main" "sideBar main main main" "sideBar main main main" "footer footer footer footer"; }
+    grid-template-areas: "header header header header" "homeNav main main main" "homeNav main main main" "homeNav main main main" "footer footer footer footer"; }
   header {
     display: inherit;
-    align-items: unset; }
+    align-items: center; }
     header .header__logo {
       width: 30%;
       margin-left: 4.5%; }
-  .sideBar {
+  .nav {
     min-height: 66vh;
     font-size: 4rem;
     line-height: 5rem;
     text-align: left;
     padding: 1rem 2.5rem 1rem 5rem; }
-    .sideBar .sideBar__navList li {
+    .nav .nav__list li {
       border: 0;
       list-style-image: url(../img/spark.gif);
       width: fit-content; }
-      .sideBar .sideBar__navList li:hover {
+      .nav .nav__list li:hover {
         background-color: whitesmoke;
         color: #100f7a;
         text-shadow: none; }
-    .sideBar .sideBar__navList a {
+    .nav .nav__list a {
       display: inline; }
-    .sideBar .sideBar__navList #productsTab #desplegableCategories li {
+    .nav .nav__list #productsTab #desplegableCategories li {
       list-style: none;
       font-family: serif;
       width: auto; }
-      .sideBar .sideBar__navList #productsTab #desplegableCategories li:hover {
+      .nav .nav__list #productsTab #desplegableCategories li:hover {
         background-color: #100f7a;
         color: whitesmoke;
         text-shadow: none; }
-      .sideBar .sideBar__navList #productsTab #desplegableCategories li:not(:first-of-type) {
+      .nav .nav__list #productsTab #desplegableCategories li:not(:first-of-type) {
         border-top: 0.1rem solid #100f7a; }
   main {
     min-height: 66vh; }

@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/styles.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,900;1,100;1,400;1,500;1,900&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="img/favicon.png">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
 
     <script type="text/javascript">
         $(window).on('load', function() {
@@ -19,15 +19,19 @@
         });
     </script>
 
-    <title>DNTFLYBBY | Home</title>
+    <title>DNTFLYBBY | home</title>
 </head>
 <body class="borderBox">
      
     <header class="row">
 
-        <a href="#" class="header__logo col-sm-4 col-lg-4"><img src="img/logo.png" alt="logo" id="logo"></a>
+        <a data-toggle="collapse" href="#hamMenu" role="button" aria-expanded="false" aria-controls="hamMenu"><img src="img/menu.png" alt="menu" class="icon" id="hamMenuIcon"></a>
 
-        <div class="header__icons col-sm-8 col-lg-8">
+        <!-- <a href="#" class="header__logo col-sm-4 col-lg-4"><img src="img/logo.png" alt="logo" id="logo"></a> -->
+
+        <a href="#" class="header__logo"><img src="img/favicon.png" alt="logo" id="logo"></a>
+
+        <div class="header__icons">
             <form action="php/search-results.php" method="GET" enctype="" class="search">
                 
                 <input type="search" class="searchText" mozactionhint="search" placeholder="search">
@@ -45,13 +49,13 @@
 
     <nav id="navBar"></nav> 
 
-    <nav class="sideBar">
+    <nav class="nav" id="hamMenu">
     
         <!-- <h2>menu</h2> -->
 
-        <ul class="sideBar__navList">
+        <ul class="nav__list">
             <li> <a href="pages/us.html">us</a> </li>
-            <li id="productsTab"><a data-toggle="collapse" href="#desplegableCategories" role="button" aria-expanded="false" aria-controls="desplegableCategories">products</a>
+            <li id="productsTab"><a data-toggle="collapse" href="#desplegableCategories" role="button" aria-expanded="false" aria-controls="desplegableCategories">products <span>▾</span></a>
 
                 <ul class="collapse" id="desplegableCategories">
                     <!-- <li><a href="products.html">PRODUCTS</a></li> -->
@@ -63,6 +67,7 @@
                 </ul>
             
             </li>
+            <li> <a href="pages/sale.html">sale!</a> </li>
             <li> <a href="pages/lookbook.html">lookbook</a> </li>
             <li> <a href="pages/faqs.html">faq's</a> </li>
             <li> <a href="pages/contact.html">contact</a> </li>
@@ -78,22 +83,22 @@
 
         <section class="main__featured row">
 
-            <span class="col-lg-3"><img src="img/tshirts/1.jpg" alt=""></span>
-            <span class="col-lg-3"><img src="img/tshirts/2.jpg" alt=""></span>
-            <span class="col-lg-3"><img src="img/tshirts/3.jpg" alt=""></span>
-            <span class="col-lg-3"><img src="img/tshirts/4.jpg" alt=""></span>
-            <span class="col-lg-3"><img src="img/tshirts/5.jpg" alt=""></span>
-            <span class="col-lg-3"><img src="img/tshirts/6.jpg" alt=""></span>
-            <span class="col-lg-3"><img src="img/tshirts/7.jpg" alt=""></span>
-            <span class="col-lg-3"><img src="img/tshirts/8.jpg" alt=""></span>
-            <span class="col-lg-3"><img src="img/tshirts/1.jpg" alt=""></span>
-            <span class="col-lg-3"><img src="img/tshirts/2.jpg" alt=""></span>
-            <span class="col-lg-3"><img src="img/tshirts/3.jpg" alt=""></span>
-            <span class="col-lg-3"><img src="img/tshirts/4.jpg" alt=""></span>
-            <span class="col-lg-3"><img src="img/tshirts/5.jpg" alt=""></span>
-            <span class="col-lg-3"><img src="img/tshirts/6.jpg" alt=""></span>
-            <span class="col-lg-3"><img src="img/tshirts/7.jpg" alt=""></span>
-            <span class="col-lg-3"><img src="img/tshirts/8.jpg" alt=""></span>
+            <span><img src="img/tshirts/pngs/1.png" alt=""></span>
+            <span><img src="img/tshirts/pngs/2.png" alt=""></span>
+            <span><img src="img/tshirts/pngs/3.png" alt=""></span>
+            <span><img src="img/tshirts/pngs/4.png" alt=""></span>
+            <span><img src="img/tshirts/pngs/5.png" alt=""></span>
+            <span><img src="img/tshirts/pngs/6.png" alt=""></span>
+            <span><img src="img/tshirts/pngs/7.png" alt=""></span>
+            <span><img src="img/tshirts/pngs/8.png" alt=""></span>
+            <span><img src="img/tshirts/pngs/1.png" alt=""></span>
+            <span><img src="img/tshirts/pngs/2.png" alt=""></span>
+            <span><img src="img/tshirts/pngs/3.png" alt=""></span>
+            <span><img src="img/tshirts/pngs/4.png" alt=""></span>
+            <span><img src="img/tshirts/pngs/5.png" alt=""></span>
+            <span><img src="img/tshirts/pngs/6.png" alt=""></span>
+            <span><img src="img/tshirts/pngs/7.png" alt=""></span>
+            <span><img src="img/tshirts/pngs/8.png" alt=""></span>
 
         </section>
 

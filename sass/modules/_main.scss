@@ -6,6 +6,7 @@ main {
 }
 
 .mainHome {
+    height: auto;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
@@ -32,13 +33,13 @@ main {
 
         span {
             display: inline-block;
-            width: 25%;
-            padding: 0 5rem;
+            width: auto;
+            padding: 0 1rem;
         }
 
         img {
             display: inline-block;
-            width: 100%;
+            width: 7rem;
             // transform: rotate(-5deg);
         }
         

@@ -16,12 +16,14 @@
 
     <header class="row borderBox">
 
-        <a href="../index.html" class="header__logo col-sm-4"><img src="../img/logo.png" alt="logo" id="logo"></a>
+        <!-- <a href="../index.html" class="header__logo col-sm-4 col-lg-4"><img src="../img/logo.png" alt="logo" id="logo"></a> -->
 
-        <div class="header__icons col-sm-7">
-            <form action="../php/search-results.php" method="GET" enctype="" class="search">
-                <input type="search" class="searchText" mozactionhint="search" placeholder="search" class="icon">
-                    <input type="image" src="../img/search.png" alt="search icon" value="send" id="searchButton" class="icon">
+        <a href="../index.html" class="header__logo"><img src="../img/favicon.png" alt="logo" id="logo"></a>
+
+        <div class="header__icons">
+            <form action="php/search-results.php" method="GET" enctype="" class="search">
+                <input type="search" class="searchText" mozactionhint="search" placeholder="search">
+                <img src="../img/search.png" class="icon">
             </form>
                 
             <a href="register.html"><img src="../img/user.png" alt="register login icon" class="icon"></a>

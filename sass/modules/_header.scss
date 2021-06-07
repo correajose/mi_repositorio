@@ -2,30 +2,30 @@
 
 header {
     grid-area: header;
+    height: 4rem;
     // width: 100%;
-    display: inline-flex;
+    background-color: map-get($palette, myred);
+    display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
     margin: 0;
 
     .header__logo {
-        width: 60%;
+        // width: 60%;
         padding: .5rem;
         /* background: radial-gradient(#ebebe6,map-get($palette,myred)); */
-        box-shadow: 0 1.5rem .5rem #3f0823bd; 
+        // box-shadow: 0 1.5rem .5rem #3f0823bd; 
         // border: groove .7rem map-get($palette,myred);
-        border-radius: 50% 50%;
-        margin: .5rem;
-        padding: auto 0;
+        // border-radius: 50% 50%;
         display: flex;
         flex-flow: row;
         justify-content: center;
         animation: bounce 1.5s cubic-bezier(.37,.01,.63,1) infinite;
 
-        #logo {
+        /* #logo {
             width: 80%;
-        }
+        } */
         
     }
 
@@ -33,6 +33,7 @@ header {
         padding: .8rem 0;
         height: 100%;
         display: flex;
+        display: none;
         flex-flow: row nowrap;
         justify-content: space-around;
         align-items: center;
@@ -43,12 +44,17 @@ header {
 
         .searchButton { position: absolute;}
     }
+
+    #hamMenuIcon {
+        position: absolute;
+        
+    }
 }
 
 @keyframes bounce {
-    0% {transform: translate(0, -.2rem);}
+    0% {transform: translate(0, -.1rem);}
     // 25% {transform: translate(0);}
-    50% {transform: translate(0, .2rem);}
+    50% {transform: translate(0, .1rem);}
     // 75% {transform: translate(0);}
-    100% {transform: translate(0, -.2rem);}
+    100% {transform: translate(0, -.1rem);}
 }
