@@ -1,13 +1,10 @@
 @import "mixins";
 
 //PÁGINA PRODUCTS
-section#tshirts {
 
-    .tshirts__grid {
-        display: none;
-    }
+section#tshirts, section#tops, section#pants, section#accs {
 
-    &:target > .tshirts__grid {
+    .product__grid {
         padding: 0 3rem;
         display: grid;
         grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr;
@@ -23,7 +20,7 @@ section#tshirts {
 
         }
 
-        .tshirts__grid__itemViewBox {
+        .product__grid__itemViewBox {
             text-align: center;
             a {
                 
@@ -34,21 +31,21 @@ section#tshirts {
                 }
             }
 
-            .tshirts__grid__itemViewBox__title {
+            .product__grid__itemViewBox__title {
                 display: block;
                 font-weight: 500;
                 font-style: italic;
                 font-size: 1.6rem;
-                color: whitesmoke;
+                color: rgb(27, 27, 27);
                 margin: .5rem 0;
             }
 
-            .tshirts__grid__itemViewBox__price {
+            .product__grid__itemViewBox__price {
                 display: inline-block;
                 font-weight: 500;
                 font-style: italic;
                 font-size: 1.6rem;
-                color: whitesmoke;
+                color: rgb(27, 27, 27);
             }
 
             .button--green {

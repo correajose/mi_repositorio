@@ -47,33 +47,46 @@
 
     <hr>
 
-    <nav id="navBar"></nav> 
-
-    <nav class="nav" id="hamMenu">
+    <nav class="navMenu" id="hamMenu">
     
-        <!-- <h2>menu</h2> -->
-
-        <ul class="nav__list">
+        <ul class="navMenu__list">
             <li> <a href="pages/us.html">us</a> </li>
-            <li id="productsTab"><a data-toggle="collapse" href="#desplegableCategories" role="button" aria-expanded="false" aria-controls="desplegableCategories">products <span>▾</span></a>
+            <li id="productsTab"><a data-toggle="collapse" href="#desplegableCategories" role="button" aria-expanded="false" aria-controls="desplegableCategories" class="collapsed">products<span id="arrowdw">▾</span><span id="arrowup">▴</span></a>
 
                 <ul class="collapse" id="desplegableCategories">
-                    <!-- <li><a href="products.html">PRODUCTS</a></li> -->
-                    <li><a href="pages/products.html#tshirts">t-shirts</a></li>
-                    <li><a href="pages/products.html#tops">tops</a></li>
-                    <li><a href="pages/products.html#pants">bottoms</a></li>
-                    <li><a href="pages/products.html#accs">accesories & objects</a></li>
+                    <li><a href="pages/tshirts.html">t-shirts</a></li>
+                    <li><a href="pages/tops.html">tops</a></li>
+                    <li><a href="pages/pants.html">bottoms</a></li>
+                    <li><a href="pages/accs.html">accesories & objects</a></li>
                     
                 </ul>
             
             </li>
             <li> <a href="pages/sale.html">sale!</a> </li>
             <li> <a href="pages/lookbook.html">lookbook</a> </li>
-            <li> <a href="pages/faqs.html">faq's</a> </li>
-            <li> <a href="pages/contact.html">contact</a> </li>
 
         </ul>
 
+        
+        <form action="email-list.php" method="POST" enctype="" target="_blank" id="navMenu__newsletter">
+            <label for="email">subscribe to our newsletter!</label>
+            <input type="email" name="email" value="name@example.com" placeholder="name@example.com" acceskey="a" mozactionhint="send" autocapitalize="none" class="button">
+            <input type="submit" value="&darr;" class="button">      
+
+        </form>
+
+        <ul class="links">
+            <li><a href="pages/login.html">Sign In</a></li>
+            <li><a href="pages/register.html">Sign Up</a></li>
+            <li><a href="pages/account.html">My Account</a></li>
+
+            <li><a href="pages/faqs.html">FAQ'S</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
+            <li>contact@dfb.com</li>
+            <li>+549-xxx-xxxxxx</li>
+        </ul>
+
+        <img src="img/logobnw.png" alt="" id="footMark">
 
     </nav>
 
@@ -83,22 +96,22 @@
 
         <section class="main__featured row">
 
-            <span><img src="img/tshirts/pngs/1.png" alt=""></span>
-            <span><img src="img/tshirts/pngs/2.png" alt=""></span>
-            <span><img src="img/tshirts/pngs/3.png" alt=""></span>
-            <span><img src="img/tshirts/pngs/4.png" alt=""></span>
-            <span><img src="img/tshirts/pngs/5.png" alt=""></span>
-            <span><img src="img/tshirts/pngs/6.png" alt=""></span>
-            <span><img src="img/tshirts/pngs/7.png" alt=""></span>
-            <span><img src="img/tshirts/pngs/8.png" alt=""></span>
-            <span><img src="img/tshirts/pngs/1.png" alt=""></span>
-            <span><img src="img/tshirts/pngs/2.png" alt=""></span>
-            <span><img src="img/tshirts/pngs/3.png" alt=""></span>
-            <span><img src="img/tshirts/pngs/4.png" alt=""></span>
-            <span><img src="img/tshirts/pngs/5.png" alt=""></span>
-            <span><img src="img/tshirts/pngs/6.png" alt=""></span>
-            <span><img src="img/tshirts/pngs/7.png" alt=""></span>
-            <span><img src="img/tshirts/pngs/8.png" alt=""></span>
+            <img src="img/tshirts/pngs/1.png" alt="" class="marquee1">
+            <img src="img/tshirts/pngs/2.png" alt="" class="marquee1">
+            <img src="img/tshirts/pngs/3.png" alt="" class="marquee1">
+            <img src="img/tshirts/pngs/4.png" alt="" class="marquee1">
+            <img src="img/tshirts/pngs/5.png" alt="" class="marquee1">
+            <img src="img/tshirts/pngs/6.png" alt="" class="marquee1">
+            <img src="img/tshirts/pngs/7.png" alt="" class="marquee1">
+            <img src="img/tshirts/pngs/8.png" alt="" class="marquee1">
+            <img src="img/tshirts/pngs/1.png" alt="" class="marquee2">
+            <img src="img/tshirts/pngs/2.png" alt="" class="marquee2">
+            <img src="img/tshirts/pngs/3.png" alt="" class="marquee2">
+            <img src="img/tshirts/pngs/4.png" alt="" class="marquee2">
+            <!-- <img src="img/tshirts/pngs/5.png" alt="" class="marquee2">
+            <img src="img/tshirts/pngs/6.png" alt="" class="marquee2">
+            <img src="img/tshirts/pngs/7.png" alt="" class="marquee2">
+            <img src="img/tshirts/pngs/8.png" alt="" class="marquee2"> -->
 
         </section>
 

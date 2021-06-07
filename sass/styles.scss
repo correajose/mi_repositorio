@@ -4,7 +4,7 @@
 @import "modules/header";
 @import "modules/main";
 @import "modules/navBar";
-@import "modules/nav";
+@import "modules/navMenu";
 @import "modules/table";
 @import "modules/text";
 @import "modules/newsletter";
@@ -86,14 +86,14 @@ a {
         }
     }
 
-    .nav {
+    .navMenu {
         min-height: 66vh;
         font-size: 4rem;
         line-height: 5rem;
         text-align: left;
         padding: 1rem 2.5rem 1rem 5rem;
 
-        .nav__list {
+        .navMenu__list {
 
             li{
                 border: 0;
@@ -165,18 +165,7 @@ a {
     }
 
     footer {
-        background: none;
-        background-image: url(../img/race-flag.png);
         background-size: 40%;
-
-        a {
-            display: inline-block;
-            background: whitesmoke;
-            padding: .2rem;
-        }
-        span {
-            background: whitesmoke;
-        }
     }
 
     h1 {

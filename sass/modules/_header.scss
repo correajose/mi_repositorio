@@ -3,10 +3,12 @@
 header {
     grid-area: header;
     height: 4rem;
-    // width: 100%;
+    width: 100%;
+    position: sticky;
+    top: 0;
     background-color: map-get($palette, myred);
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
     margin: 0;
@@ -47,7 +49,8 @@ header {
 
     #hamMenuIcon {
         position: absolute;
-        
+        top: 1rem;
+        left: 1rem;
     }
 }
 

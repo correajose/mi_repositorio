@@ -1,13 +1,17 @@
 body {
   width: 100%;
-  height: auto;
+  height: 100%;
   background: whitesmoke; }
 
 footer {
   grid-area: footer;
-  background-image: url(../img/race-flag.png);
-  background-size: 100%;
+  background-color: gray;
+  background-size: 200%;
   padding: .5rem .8rem; }
+  footer a {
+    display: inline-block;
+    background: whitesmoke;
+    padding: .2rem; }
 
 form.search {
   display: inline-block;
@@ -57,9 +61,12 @@ textarea {
 header {
   grid-area: header;
   height: 4rem;
+  width: 100%;
+  position: sticky;
+  top: 0;
   background-color: #E21D7B;
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
   margin: 0; }
@@ -86,7 +93,9 @@ header {
     header div.header__icons .searchButton {
       position: absolute; }
   header #hamMenuIcon {
-    position: absolute; }
+    position: absolute;
+    top: 1rem;
+    left: 1rem; }
 
 @keyframes bounce {
   0% {
@@ -97,15 +106,16 @@ header {
     transform: translate(0, -0.1rem); } }
 
 main {
-  width: 100%;
-  grid-area: main; }
+  grid-area: main;
+  min-height: 80vh;
+  margin-bottom: 8rem; }
 
 .mainHome {
   height: auto;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
-  padding-bottom: 2rem; }
+  margin: 1rem 0; }
   .mainHome .main__featured {
     width: 100%;
     display: flex;
@@ -113,21 +123,29 @@ main {
     overflow: hidden; }
     .mainHome .main__featured:hover > span {
       animation-play-state: paused; }
-    .mainHome .main__featured span {
-      animation: marquee 10s infinite linear; }
 
-@keyframes marquee {
+@keyframes marquee1 {
   0% {
     transform: translate(400%, 0); }
   100% {
-    transform: translate(-1600%, 0); } }
-    .mainHome .main__featured span {
+    transform: translate(-800%, 0); } }
+    .mainHome .main__featured .marquee1 {
       display: inline-block;
-      width: auto;
-      padding: 0 1rem; }
-    .mainHome .main__featured img {
+      width: 25%;
+      padding: 0 1rem;
+      animation: marquee1 8s infinite linear; }
+
+@keyframes marquee2 {
+  100% {
+    transform: translate(-400%, 0); } }
+    .mainHome .main__featured .marquee2 {
+      transform: translate(400%, 0);
       display: inline-block;
-      width: 7rem; }
+      width: 25%;
+      padding: 0 1rem;
+      animation: marquee2 4s infinite linear;
+      z-index: 4;
+      animation-delay: 8s; }
 
 .navBar {
   grid-area: sideBar;
@@ -157,59 +175,95 @@ main {
       display: inline-block;
       width: 100%; }
 
-.nav {
+.navMenu {
   position: absolute;
   top: 4rem;
-  padding: 0 1.5rem;
+  padding: 0 1.5rem 1rem;
   width: 100%;
-  height: 100vh;
+  display: none;
+  height: 100%;
   grid-area: sideBar;
   background-color: whitesmoke;
-  color: #1DE284;
-  font-size: 2rem;
-  font-weight: 900;
-  text-shadow: 2px 2px 0 #DEE21D;
   text-align: left; }
-  .nav .nav__list {
+  .navMenu .navMenu__list {
     list-style: none;
-    width: 100%; }
-    .nav .nav__list li {
+    width: 100%;
+    height: auto;
+    flex-grow: 1;
+    color: #1DE284;
+    font-size: 2rem;
+    font-weight: 900;
+    text-shadow: 2px 2px 0 #DEE21D; }
+    .navMenu .navMenu__list li {
       padding: .5rem 0;
       width: 100%;
-      text-align: justify;
       text-transform: uppercase; }
-      .nav .nav__list li:not(:first-of-type) {
+      .navMenu .navMenu__list li:not(:first-of-type) {
         border-top: 0.1rem solid #1DE284; }
-      .nav .nav__list li:active {
-        background-color: whitesmoke;
-        color: #100f7a;
-        text-shadow: none; }
-    .nav .nav__list a {
-      width: 100%; }
-    .nav .nav__list #productsTab #desplegableCategories {
+      .navMenu .navMenu__list li a {
+        width: 100%; }
+        .navMenu .navMenu__list li a:active {
+          text-shadow: .2rem .2rem 0 gray; }
+    .navMenu .navMenu__list li#productsTab a.collapsed span#arrowup {
+      display: none; }
+    .navMenu .navMenu__list li#productsTab a.collapsed span#arrowdw {
+      display: inline; }
+    .navMenu .navMenu__list li#productsTab span#arrowup {
+      display: inline; }
+    .navMenu .navMenu__list li#productsTab span#arrowdw {
+      display: none; }
+    .navMenu .navMenu__list li#productsTab #desplegableCategories {
       list-style: none;
-      background-color: rgba(233, 233, 233, 0.603); }
-      .nav .nav__list #productsTab #desplegableCategories li {
+      background-color: rgba(233, 233, 233, 0.603);
+      width: 70%;
+      padding: 0 .5rem; }
+      .navMenu .navMenu__list li#productsTab #desplegableCategories li {
         text-transform: lowercase; }
-    .nav .nav__list a {
+    .navMenu .navMenu__list a {
       display: inline-block;
       width: 100%; }
+  .navMenu #navMenu__newsletter {
+    border-bottom: 0.1rem solid #353535;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem; }
+    .navMenu #navMenu__newsletter label {
+      display: block; }
+  .navMenu .links {
+    list-style: none; }
+    .navMenu .links a:active {
+      text-decoration: underline; }
+    .navMenu .links li {
+      line-height: 2rem; }
+      .navMenu .links li:nth-child(3) {
+        border-bottom: 0.1rem solid #353535;
+        padding-bottom: 1rem; }
+      .navMenu .links li:nth-child(4) {
+        padding-top: 1rem; }
+  .navMenu #footMark {
+    width: 25%;
+    padding: .2rem;
+    border-radius: 50% 50%;
+    border: 0.1rem solid #2c2c2c; }
+
+.show {
+  display: flex;
+  flex-flow: column nowrap; }
 
 h1 {
   font-style: normal;
   font-weight: 900;
-  font-size: 4.5rem;
+  font-size: 4rem;
   color: #1DE284;
   text-shadow: 2px 2px 0 #DEE21D;
   padding: .2rem .5rem;
   text-transform: uppercase; }
 
 h2 {
-  font-style: italic;
+  font-style: normal;
   font-weight: 700;
-  font-size: 3.5rem;
+  font-size: 2rem;
   color: #1DE284;
-  text-shadow: 2px 2px 0 #DEE21D;
+  padding: .2rem;
   text-transform: uppercase; }
 
 /* TEXTOS LARGOS */
@@ -286,10 +340,7 @@ h2 {
         .popUpOuter .popUpInner #popUpInner__newsletterContainer form input:nth-child(2) {
           width: 15%; }
 
-section#tshirts .tshirts__grid {
-  display: none; }
-
-section#tshirts:target > .tshirts__grid {
+section#tshirts .product__grid, section#tops .product__grid, section#pants .product__grid, section#accs .product__grid {
   padding: 0 3rem;
   display: grid;
   grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr;
@@ -297,41 +348,41 @@ section#tshirts:target > .tshirts__grid {
   row-gap: 3rem;
   column-gap: 3rem;
   margin: 1rem 0 1.6rem; }
-  section#tshirts:target > .tshirts__grid img:nth-child(1) {
+  section#tshirts .product__grid img:nth-child(1), section#tops .product__grid img:nth-child(1), section#pants .product__grid img:nth-child(1), section#accs .product__grid img:nth-child(1) {
     grid-area: 1; }
-  section#tshirts:target > .tshirts__grid img:nth-child(2) {
+  section#tshirts .product__grid img:nth-child(2), section#tops .product__grid img:nth-child(2), section#pants .product__grid img:nth-child(2), section#accs .product__grid img:nth-child(2) {
     grid-area: 2; }
-  section#tshirts:target > .tshirts__grid img:nth-child(3) {
+  section#tshirts .product__grid img:nth-child(3), section#tops .product__grid img:nth-child(3), section#pants .product__grid img:nth-child(3), section#accs .product__grid img:nth-child(3) {
     grid-area: 3; }
-  section#tshirts:target > .tshirts__grid img:nth-child(4) {
+  section#tshirts .product__grid img:nth-child(4), section#tops .product__grid img:nth-child(4), section#pants .product__grid img:nth-child(4), section#accs .product__grid img:nth-child(4) {
     grid-area: 4; }
-  section#tshirts:target > .tshirts__grid img:nth-child(5) {
+  section#tshirts .product__grid img:nth-child(5), section#tops .product__grid img:nth-child(5), section#pants .product__grid img:nth-child(5), section#accs .product__grid img:nth-child(5) {
     grid-area: 5; }
-  section#tshirts:target > .tshirts__grid img:nth-child(6) {
+  section#tshirts .product__grid img:nth-child(6), section#tops .product__grid img:nth-child(6), section#pants .product__grid img:nth-child(6), section#accs .product__grid img:nth-child(6) {
     grid-area: 6; }
-  section#tshirts:target > .tshirts__grid img:nth-child(7) {
+  section#tshirts .product__grid img:nth-child(7), section#tops .product__grid img:nth-child(7), section#pants .product__grid img:nth-child(7), section#accs .product__grid img:nth-child(7) {
     grid-area: 7; }
-  section#tshirts:target > .tshirts__grid img:nth-child(8) {
+  section#tshirts .product__grid img:nth-child(8), section#tops .product__grid img:nth-child(8), section#pants .product__grid img:nth-child(8), section#accs .product__grid img:nth-child(8) {
     grid-area: 8; }
-  section#tshirts:target > .tshirts__grid .tshirts__grid__itemViewBox {
+  section#tshirts .product__grid .product__grid__itemViewBox, section#tops .product__grid .product__grid__itemViewBox, section#pants .product__grid .product__grid__itemViewBox, section#accs .product__grid .product__grid__itemViewBox {
     text-align: center; }
-    section#tshirts:target > .tshirts__grid .tshirts__grid__itemViewBox a img {
+    section#tshirts .product__grid .product__grid__itemViewBox a img, section#tops .product__grid .product__grid__itemViewBox a img, section#pants .product__grid .product__grid__itemViewBox a img, section#accs .product__grid .product__grid__itemViewBox a img {
       width: 100%;
       display: inline-block; }
-    section#tshirts:target > .tshirts__grid .tshirts__grid__itemViewBox .tshirts__grid__itemViewBox__title {
+    section#tshirts .product__grid .product__grid__itemViewBox .product__grid__itemViewBox__title, section#tops .product__grid .product__grid__itemViewBox .product__grid__itemViewBox__title, section#pants .product__grid .product__grid__itemViewBox .product__grid__itemViewBox__title, section#accs .product__grid .product__grid__itemViewBox .product__grid__itemViewBox__title {
       display: block;
       font-weight: 500;
       font-style: italic;
       font-size: 1.6rem;
-      color: whitesmoke;
+      color: #1b1b1b;
       margin: .5rem 0; }
-    section#tshirts:target > .tshirts__grid .tshirts__grid__itemViewBox .tshirts__grid__itemViewBox__price {
+    section#tshirts .product__grid .product__grid__itemViewBox .product__grid__itemViewBox__price, section#tops .product__grid .product__grid__itemViewBox .product__grid__itemViewBox__price, section#pants .product__grid .product__grid__itemViewBox .product__grid__itemViewBox__price, section#accs .product__grid .product__grid__itemViewBox .product__grid__itemViewBox__price {
       display: inline-block;
       font-weight: 500;
       font-style: italic;
       font-size: 1.6rem;
-      color: whitesmoke; }
-    section#tshirts:target > .tshirts__grid .tshirts__grid__itemViewBox .button--green {
+      color: #1b1b1b; }
+    section#tshirts .product__grid .product__grid__itemViewBox .button--green, section#tops .product__grid .product__grid__itemViewBox .button--green, section#pants .product__grid .product__grid__itemViewBox .button--green, section#accs .product__grid .product__grid__itemViewBox .button--green {
       background-color: #DEE21D; }
 
 /* PAGINA PRODUCT VIEW */
@@ -429,31 +480,31 @@ a {
     header .header__logo {
       width: 30%;
       margin-left: 4.5%; }
-  .nav {
+  .navMenu {
     min-height: 66vh;
     font-size: 4rem;
     line-height: 5rem;
     text-align: left;
     padding: 1rem 2.5rem 1rem 5rem; }
-    .nav .nav__list li {
+    .navMenu .navMenu__list li {
       border: 0;
       list-style-image: url(../img/spark.gif);
       width: fit-content; }
-      .nav .nav__list li:hover {
+      .navMenu .navMenu__list li:hover {
         background-color: whitesmoke;
         color: #100f7a;
         text-shadow: none; }
-    .nav .nav__list a {
+    .navMenu .navMenu__list a {
       display: inline; }
-    .nav .nav__list #productsTab #desplegableCategories li {
+    .navMenu .navMenu__list #productsTab #desplegableCategories li {
       list-style: none;
       font-family: serif;
       width: auto; }
-      .nav .nav__list #productsTab #desplegableCategories li:hover {
+      .navMenu .navMenu__list #productsTab #desplegableCategories li:hover {
         background-color: #100f7a;
         color: whitesmoke;
         text-shadow: none; }
-      .nav .nav__list #productsTab #desplegableCategories li:not(:first-of-type) {
+      .navMenu .navMenu__list #productsTab #desplegableCategories li:not(:first-of-type) {
         border-top: 0.1rem solid #100f7a; }
   main {
     min-height: 66vh; }
@@ -470,15 +521,7 @@ a {
       .popUpOuter .popUpInner #popUpInner__newsletterContainer .modal-title {
         font-size: 1.6rem; }
   footer {
-    background: none;
-    background-image: url(../img/race-flag.png);
     background-size: 40%; }
-    footer a {
-      display: inline-block;
-      background: whitesmoke;
-      padding: .2rem; }
-    footer span {
-      background: whitesmoke; }
   h1 {
     font-size: 5.5rem; }
   .navBar {
