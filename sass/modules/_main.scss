@@ -20,7 +20,7 @@ main {
         flex-flow: row;
         overflow: hidden;
 
-        &:hover > span {animation-play-state: paused;}
+        &:hover {animation-play-state: paused;}
 
         @keyframes marquee1 {
             0% {transform: translate(400%, 0);}

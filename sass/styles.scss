@@ -68,12 +68,14 @@ a {
 
     body {
         display: grid;
-        grid-template: 20vh auto auto auto 10vh / 1.2fr repeat(3,1fr);
+        grid-template: 4rem auto auto auto 10vh / 1.2fr repeat(3,1fr);
         grid-template-areas: "header header header header"
-                             "homeNav main main main"
-                             "homeNav main main main"
-                             "homeNav main main main"
+                             "sideBar main main main"
+                             "sideBar main main main"
+                             ". main main main"
                              "footer footer footer footer";
+        min-height: 100vh;
+        height: auto;
     }
 
     header {
@@ -88,27 +90,28 @@ a {
 
     .navMenu {
         min-height: 66vh;
-        font-size: 4rem;
+        font-size: 1.6rem;
         line-height: 5rem;
         text-align: left;
-        padding: 1rem 2.5rem 1rem 5rem;
+        padding: 1rem;
 
         .navMenu__list {
 
             li{
                 border: 0;
-                list-style-image: url(../img/spark.gif);
-                width: fit-content;
+                // list-style-image: url(../img/spark.gif);
 
-                &:hover {
-                    background-color: whitesmoke;
-                    color: map-get($palette,mydarkblue);
-                    text-shadow: none;
+                a{
+                    width: 100%;
+                    display: inline;
+
+                    &:hover {
+                        // background-color: whitesmoke;
+                        // color: map-get($palette,mydarkblue);
+                        text-shadow: .2rem .2rem 0 gray;
+                    }
                 }
-            }
 
-            a {
-                display: inline;
             }
 
             #productsTab {
@@ -118,22 +121,28 @@ a {
 
                     li { 
                         list-style: none;
-                        font-family: serif;
-                        width: auto;
+                        font-weight: 400;
+                        width: 100%;
 
-                        &:hover {
-                            background-color: map-get($palette,mydarkblue);
-                            color: whitesmoke;
-                            text-shadow: none;
-                        }
+                        a{
+                            width: 100%;
 
-                        &:not(:first-of-type) {
-                            border-top: 0.1rem solid map-get($palette, mydarkblue);
+                            &:hover {
+                                // color: whitesmoke;
+                                text-shadow: .2rem .2rem 0 gray;
+                            }
+
+                            &:not(:first-of-type) {
+                                border-top: 0.1rem solid map-get($palette, mydarkblue);
+                            }
                         }
+                    
                     }
                 }
             }
         }
+
+        
     }
 
     main {
@@ -202,11 +211,7 @@ a {
 
     #prodCategories {
 
-        #tshirts {
-
-            margin: 0 1rem 5rem;
-
-            &:target > .tshirts__grid {
+            &:target > .product__grid {
                 padding: 0 3rem;
                 display: grid;
                 grid-template: repeat(3,1fr) / repeat(3, 1fr);
@@ -216,9 +221,9 @@ a {
                 }
             }
 
-            .tshirts__grid {
+            .product__grid {
 
-                .tshirts__grid__itemViewBox {
+                .product__grid__itemViewBox {
                     text-align: center;
                         a {
                             img {
@@ -239,7 +244,7 @@ a {
                         } */
                 }
             }
-        }
+        
     }
 
 }

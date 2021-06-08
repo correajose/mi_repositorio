@@ -120,7 +120,7 @@ main {
     display: flex;
     flex-flow: row;
     overflow: hidden; }
-    .mainHome .main__featured:hover > span {
+    .mainHome .main__featured:hover {
       animation-play-state: paused; }
 
 @keyframes marquee1 {
@@ -469,8 +469,10 @@ a {
 @media screen and (min-width: 768px) {
   body {
     display: grid;
-    grid-template: 20vh auto auto auto 10vh/1.2fr repeat(3, 1fr);
-    grid-template-areas: "header header header header" "homeNav main main main" "homeNav main main main" "homeNav main main main" "footer footer footer footer"; }
+    grid-template: 4rem auto auto auto 10vh/1.2fr repeat(3, 1fr);
+    grid-template-areas: "header header header header" "sideBar main main main" "sideBar main main main" ". main main main" "footer footer footer footer";
+    min-height: 100vh;
+    height: auto; }
   header {
     display: inherit;
     align-items: center; }
@@ -479,30 +481,27 @@ a {
       margin-left: 4.5%; }
   .navMenu {
     min-height: 66vh;
-    font-size: 4rem;
+    font-size: 1.6rem;
     line-height: 5rem;
     text-align: left;
-    padding: 1rem 2.5rem 1rem 5rem; }
+    padding: 1rem; }
     .navMenu .navMenu__list li {
-      border: 0;
-      list-style-image: url(../img/spark.gif);
-      width: fit-content; }
-      .navMenu .navMenu__list li:hover {
-        background-color: whitesmoke;
-        color: #100f7a;
-        text-shadow: none; }
-    .navMenu .navMenu__list a {
-      display: inline; }
+      border: 0; }
+      .navMenu .navMenu__list li a {
+        width: 100%;
+        display: inline; }
+        .navMenu .navMenu__list li a:hover {
+          text-shadow: .2rem .2rem 0 gray; }
     .navMenu .navMenu__list #productsTab #desplegableCategories li {
       list-style: none;
-      font-family: serif;
-      width: auto; }
-      .navMenu .navMenu__list #productsTab #desplegableCategories li:hover {
-        background-color: #100f7a;
-        color: whitesmoke;
-        text-shadow: none; }
-      .navMenu .navMenu__list #productsTab #desplegableCategories li:not(:first-of-type) {
-        border-top: 0.1rem solid #100f7a; }
+      font-weight: 400;
+      width: 100%; }
+      .navMenu .navMenu__list #productsTab #desplegableCategories li a {
+        width: 100%; }
+        .navMenu .navMenu__list #productsTab #desplegableCategories li a:hover {
+          text-shadow: .2rem .2rem 0 gray; }
+        .navMenu .navMenu__list #productsTab #desplegableCategories li a:not(:first-of-type) {
+          border-top: 0.1rem solid #100f7a; }
   main {
     min-height: 66vh; }
   .popUpOuter .popUpInner {
@@ -541,17 +540,15 @@ a {
           background-color: whitesmoke;
           color: #100f7a;
           text-shadow: none; }
-  #prodCategories #tshirts {
-    margin: 0 1rem 5rem; }
-    #prodCategories #tshirts:target > .tshirts__grid {
-      padding: 0 3rem;
-      display: grid;
-      grid-template: repeat(3, 1fr)/repeat(3, 1fr);
-      grid-template-areas: "1*3-2 1*3-1 1*3";
-      grid-template-areas: "2*3-2 2*3-1 2*3"; }
-    #prodCategories #tshirts .tshirts__grid .tshirts__grid__itemViewBox {
-      text-align: center;
-      /* .tshirts__grid__itemViewBox__title {
+  #prodCategories:target > .product__grid {
+    padding: 0 3rem;
+    display: grid;
+    grid-template: repeat(3, 1fr)/repeat(3, 1fr);
+    grid-template-areas: "1*3-2 1*3-1 1*3";
+    grid-template-areas: "2*3-2 2*3-1 2*3"; }
+  #prodCategories .product__grid .product__grid__itemViewBox {
+    text-align: center;
+    /* .tshirts__grid__itemViewBox__title {
 
                         }
 
@@ -562,8 +559,8 @@ a {
                         .button {
 
                         } */ }
-      #prodCategories #tshirts .tshirts__grid .tshirts__grid__itemViewBox a img {
-        width: 40%; } }
+    #prodCategories .product__grid .product__grid__itemViewBox a img {
+      width: 40%; } }
 
 @media screen and (min-width: 1200px) {
   header .header__logo {
