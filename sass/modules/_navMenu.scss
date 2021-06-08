@@ -11,6 +11,7 @@
     grid-area: sideBar;
     background-color: whitesmoke;
     text-align: left;
+    z-index: 9999999;
 
 
     .navMenu__list {
@@ -114,9 +115,6 @@
 
     #footMark {
         width: 25%;
-        padding: .2rem;
-        border-radius: 50% 50%;
-        border: .1rem solid rgb(44, 44, 44);
     }
 
 }
