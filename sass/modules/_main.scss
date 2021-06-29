@@ -1,10 +1,10 @@
 @import "mixins";
 
 main {
-    // width: 100%;
+    width: 100%;
     grid-area: main;
     min-height: 80vh;
-    margin-bottom: 8rem;
+    overflow: hidden;
 }
 
 .mainHome {
@@ -12,46 +12,11 @@ main {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
-    margin: 1rem 0;
-
-    .main__featured {
-        width: 100%;
-        display: flex;
-        flex-flow: row;
-        overflow: hidden;
-
-        &:hover {animation-play-state: paused;}
-
-        @keyframes marquee1 {
-            0% {transform: translate(400%, 0);}
-            100% {transform: translate(-800%, 0); }
-        }
-
-        .marquee1 {
-            display: inline-block;
-            width: 25%;
-            padding: 0 1rem;
-            animation: marquee1 8s infinite linear;
-            // transform: rotate(-5deg);
-        }
-
-        @keyframes marquee2 {
-            // 0% {transform: translate(400%, 0);}
-            100% {transform: translate(-400%, 0); }
-        }
-
-        .marquee2 {
-            transform: translate(400%, 0);
-            display: inline-block;
-            width: 25%;
-            padding: 0 1rem;
-            animation: marquee2 4s infinite linear;
-            z-index: 4;
-            animation-delay: 8s;
-            // transform: rotate(-5deg);
-        }
-        
-
-    }
 } 
+
+#fourofourMain {
+    min-height: initial;
+    grid-area: error;
+
+}
 

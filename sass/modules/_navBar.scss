@@ -1,29 +1,30 @@
 @import "mixins";
 
 .navBar {
-    // background-color: #211DE2;
-    grid-area: sideBar;
+    display: none;
+    /* grid-area: sideBar;
     color: whitesmoke;
     font-weight: 900;
     text-shadow: .1rem .1rem 0 map-get($palette,mydarkblue);
     text-align: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: left;
+    align-items: center;
 
-    .navBar__navList {
-        list-style: none;
+        ul.navBar__infoTag {
 
-        li {
-            border: .5rem outset;
+            display: inline-block;
 
-            &:hover {
-                background-color: whitesmoke;
-                color: map-get($palette,mydarkblue);
-                text-shadow: none;
+            li {
+                list-style: none;
             }
         }
         
         a {
             display: inline-block;
             width: 100%;
+
         }
 
         #productsTab {
@@ -48,7 +49,7 @@
             }
 
             
-        }
-    }
+        } */
+    
 
 }

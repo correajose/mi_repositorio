@@ -2,32 +2,29 @@
 
 header {
     grid-area: header;
-    height: 4rem;
+    height: auto;
     width: 100%;
     position: sticky;
     top: 0;
-    background-color: map-get($palette, myred);
+    background-color: rgba(245, 245, 245, 0.966);
+    // border-bottom: solid .2rem map-get($palette, myred );
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
     margin: 0;
+    z-index: 99999;
 
-    .header__logo {
-        // width: 60%;
+    .header__logotype {
+        display: none;
+    }
+
+    .header__isotype {
         padding: .5rem;
-        /* background: radial-gradient(#ebebe6,map-get($palette,myred)); */
-        // box-shadow: 0 1.5rem .5rem #3f0823bd; 
-        // border: groove .7rem map-get($palette,myred);
-        // border-radius: 50% 50%;
         display: flex;
         flex-flow: row;
         justify-content: center;
         animation: bounce 1.5s cubic-bezier(.37,.01,.63,1) infinite;
-
-        /* #logo {
-            width: 80%;
-        } */
         
     }
 

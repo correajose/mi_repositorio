@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,900;1,100;1,400;1,500;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,100;1,300;1,400;1,500;1,900&display=swap" rel="stylesheet">
+
     <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico">
 
     <script type="text/javascript">
@@ -21,15 +22,15 @@
 
     <title>DNTFLYBBY | home</title>
 </head>
-<body class="borderBox">
+<body>
      
     <header class="row">
 
         <a data-toggle="collapse" href="#hamMenu" role="button" aria-expanded="false" aria-controls="hamMenu"><img src="img/menu.png" alt="menu" class="icon" id="hamMenuIcon"></a>
 
-        <!-- <a href="#" class="header__logo col-sm-4 col-lg-4"><img src="img/logo.png" alt="logo" id="logo"></a> -->
+        <a href="#" class="header__isotype"><img src="img/favicon.png" alt="isotype" id="isotype"></a>
+        <a href="#" class="header__logotype" id="logoColor"><img src="img/logo.png" alt="logotype" id="logotype" class="logotypeColor"></a>
 
-        <a href="#" class="header__logo"><img src="img/favicon.png" alt="logo" id="logo"></a>
 
         <div class="header__icons">
             <form action="php/search-results.php" method="GET" enctype="" class="search">
@@ -45,7 +46,7 @@
 
     </header>
 
-    <hr>
+    <section class="marqueeText"><span>2021 collection just released - worldwide shipping</span></section>
 
     <nav class="navMenu" id="hamMenu">
     
@@ -86,50 +87,90 @@
             <li>+549-xxx-xxxxxx</li>
         </ul>
 
-        <img src="img/logobnw.png" alt="" id="footMark">
+        <a href="index.html"><img src="img/logobnw.png" alt="" class="footmark"></a>
 
     </nav>
 
     <main class=" mainHome">
 
-        <h1>your clothing store</h1>
-
-        <section class="main__featured row">
-
-            <img src="img/tshirts/pngs/1.png" alt="" class="marquee1">
-            <img src="img/tshirts/pngs/2.png" alt="" class="marquee1">
-            <img src="img/tshirts/pngs/3.png" alt="" class="marquee1">
-            <img src="img/tshirts/pngs/4.png" alt="" class="marquee1">
-            <img src="img/tshirts/pngs/5.png" alt="" class="marquee1">
-            <img src="img/tshirts/pngs/6.png" alt="" class="marquee1">
-            <img src="img/tshirts/pngs/7.png" alt="" class="marquee1">
-            <img src="img/tshirts/pngs/8.png" alt="" class="marquee1">
-            <img src="img/tshirts/pngs/1.png" alt="" class="marquee2">
-            <img src="img/tshirts/pngs/2.png" alt="" class="marquee2">
-            <img src="img/tshirts/pngs/3.png" alt="" class="marquee2">
-            <img src="img/tshirts/pngs/4.png" alt="" class="marquee2">
-            <!-- <img src="img/tshirts/pngs/5.png" alt="" class="marquee2">
-            <img src="img/tshirts/pngs/6.png" alt="" class="marquee2">
-            <img src="img/tshirts/pngs/7.png" alt="" class="marquee2">
-            <img src="img/tshirts/pngs/8.png" alt="" class="marquee2"> -->
-
-        </section>
-
+        <a href="pages/sale.html" id="saleBanner"><img src="img/sale.jpg" alt=""></a>
+        <a href="pages/tshirts.html" id="tshirtsBanner"><img src="img/tshirts.jpg" alt=""></a>
+        <a href="pages/tops.html" id="topsBanner"><img src="img/tops.jpg" alt=""></a>
+        <a href="pages/pants.html" id="bottomsBanner"><img src="img/bottoms.jpg" alt=""></a>
+        <a href="pages/accs.html" id="accsBanner"><img src="img/accs.jpg" alt=""></a>
+        <a href="pages/lookbook.html" id="lkbkBanner"><img src="img/lookbook.jpg" alt=""></a>
+        <a href="pages/us.html" id="usBanner"><img src="img/us.jpg" alt=""></a>
+        
     </main>
 
 
-    <hr>
+    <form action="email-list.php" method="POST" enctype="" target="_blank" id="homeNewsletter">
+        <label for="email">subscribe to our newsletter!</label>
+        <input type="email" name="email" value="name@example.com" placeholder="name@example.com" acceskey="a" mozactionhint="send" autocapitalize="none" class="button email">
+        <input type="submit" value="&darr;" class="button send">      
 
-    <footer class="">
-    
-            <a href="pages/privacy.html">Privacy policy</a><br>
-            <a href="pages/termsnconds.html">Terms & Conditions</a>
+    </form>
 
-            <div>
+    <section class="featured row">
+
+        <img src="img/tshirts/pngs/1.png" alt="" class="marquee1">
+        <img src="img/tshirts/pngs/2.png" alt="" class="marquee1">
+        <img src="img/tshirts/pngs/3.png" alt="" class="marquee1">
+        <img src="img/tshirts/pngs/4.png" alt="" class="marquee1">
+        <img src="img/tshirts/pngs/5.png" alt="" class="marquee1">
+        <img src="img/tshirts/pngs/6.png" alt="" class="marquee1">
+        <img src="img/tshirts/pngs/7.png" alt="" class="marquee1">
+        <img src="img/tshirts/pngs/8.png" alt="" class="marquee1">
+        <img src="img/tshirts/pngs/1.png" alt="" class="marquee1">
+        <img src="img/tshirts/pngs/2.png" alt="" class="marquee1">
+        <img src="img/tshirts/pngs/3.png" alt="" class="marquee1">
+        <img src="img/tshirts/pngs/4.png" alt="" class="marquee1">
+        <img src="img/tshirts/pngs/5.png" alt="" class="marquee1">
+        <img src="img/tshirts/pngs/6.png" alt="" class="marquee1">
+        <img src="img/tshirts/pngs/7.png" alt="" class="marquee1">
+        <img src="img/tshirts/pngs/8.png" alt="" class="marquee1">
+        <img src="img/tshirts/pngs/1.png" alt="" class="marquee2">
+        <img src="img/tshirts/pngs/2.png" alt="" class="marquee2">
+        <img src="img/tshirts/pngs/3.png" alt="" class="marquee2">
+        <img src="img/tshirts/pngs/4.png" alt="" class="marquee2">
+        <img src="img/tshirts/pngs/5.png" alt="" class="marquee2">
+        <img src="img/tshirts/pngs/6.png" alt="" class="marquee2">
+        <img src="img/tshirts/pngs/7.png" alt="" class="marquee2">
+        <img src="img/tshirts/pngs/8.png" alt="" class="marquee2">
+
+    </section>
+
+    <footer>
+
+            <div class="links">
+                <ul>
+                    <li><a href="pages/login.html">Sign In</a>|<a href="pages/register.html">Sign Up</a></li>
+                    <li><a href="pages/account.html">My Account</a></li>
+                    <li><a href="pages/account.html">My Cart</a></li>
+
+                    <li><a href="pages/faqs.html">FAQ'S</a></li>
+                    <li><a href="pages/events.html">Events</a></li>
+
+                    <li>© 2021 DONTFLYBABY</li>
+                    <li><a href="pages/privacy.html">Privacy policy</a></li>
+                    <li><a href="pages/termsnconds.html">Terms & Conditions</a></li>
+                    <a href="index.html"><img src="img/logobnw.png" alt="" class="footmark"></a>
+                </ul>
+            </div>
+
+            <div class="contact">
+                <ul>
+                    <a href="pages/contact.html">Contact</a></li>
+                    <li>contact@dfb.com</li>
+                    <li>+549341579731</li>
+                    <li>Hours -> (Mon - Fri) 8:00 - 16:00 (GMT-3)</li>
+                </ul>
+
                 <a href="https://wa.me/5493382579731" target="_blank"><img src="img/wapp.png" alt="whatsapp chat link" class="icon"></a>
                 <a href="https://www.facebook.com/XXXXXX" target="_blank"><img src="img/fb.png" alt="facebook page" class="icon"></a>
                 <a href="https://www.instagram.com/XXXXXX" target="_blank"><img src="img/ig.png" alt="instagram profile" class="icon"></a>
             </div>
+            
     </footer>
 
     <!-- NEWSLETTER POPUP -->
@@ -154,6 +195,7 @@
         </div>
     </div>
     
+    <a href="#" id="up">&uarr;</a>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>

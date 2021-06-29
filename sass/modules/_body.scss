@@ -1,10 +1,25 @@
 @import "mixins";
 
 body {
+    font-family: 'Roboto', serif; 
     width: 100%;
-    height: 100%;
+    height: auto;
     // font-family: 'Roboto', sans-serif;
     background: whitesmoke;
-    // background: linear-gradient(to bottom, #e21d7c,#e089b3,#e21d7c);
-    // background-repeat: round;
+    position: relative;
+
+    display: grid;
+    grid-template: 8rem 2rem auto auto 40rem / auto;
+    grid-template-areas: "header"
+                         "marqueetxt"
+                         "main"
+                         "nwslttr"
+                         "footer";
+}
+
+#fourofourBody {
+    height: 100vh;
+    grid-template: 50% 50% / auto;
+    grid-template-areas: "error"
+                         "footer";
 }

@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="DNTFLYBBY, clothing store. Rosario, Argentina, 2021. About us.">
     <meta name="keywords" content="dntflybby, ropa, clothes, streetwear, oversized, slowfashion, argentina, urban, ecofriendly, design, hoodie, jeans, remeron, remera, skate, style, straight cut, basics, basicos">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,900;1,100;1,400;1,500;1,900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,100;1,300;1,400;1,500;1,900&display=swap" rel="stylesheet">
+
     <link rel="shortcut icon" href="../img/favicon.png">
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/styles.css">
@@ -18,9 +20,8 @@
 
         <a data-toggle="collapse" href="#hamMenu" role="button" aria-expanded="false" aria-controls="hamMenu"><img src="../img/menu.png" alt="menu" class="icon" id="hamMenuIcon"></a>
 
-        <!-- <a href="../index.html" class="header__logo col-sm-4 col-lg-4"><img src="../img/logo.png" alt="logo" id="logo"></a> -->
-
-        <a href="../index.html" class="header__logo"><img src="../img/favicon.png" alt="logo" id="logo"></a>
+        <a href="../index.html" class="header__isotype"><img src="../img/favicon.png" alt="isotype" id="isotype"></a>
+        <a href="../index.html" class="header__logotype"><img src="../img/logobnw.png" alt="logotype" id="logotype"></a>
 
         <div class="header__icons">
             <form action="php/search-results.php" method="GET" enctype="" class="search">
@@ -32,9 +33,35 @@
             <a href="cart.html"><img src="../img/cart.png" alt="shopping cart icon" class="icon"></a>
         </div>
 
+        <div class="navBar">
+            <div>
+                <a href="sale.html" class="navBar__tag"><img src="../img/sale-tag.png" alt=""></a>  
+                <a href="products.html" class="navBar__tag"><img src="../img/products-tag.png" alt=""></a>
+                <a href="lookbook.html" class="navBar__tag"><img src="../img/lookbook-tag.png" alt=""></a>
+            </div>
+
+            <div>
+                <span>
+                    
+                    <a data-toggle="collapse" href="#info" role="button" aria-expanded="false" aria-controls="info" class="collapsed navBar__tag navBar__infoTag"><img src="../img/info-tag.png" alt=""><span id="arrowdw">▾</span><span id="arrowup">▴</span></a>
+
+                    <ul class="collapse navBar__infoMenu" id="info">
+                        <li><a href="us.html"><img src="../img/us-tag.png" alt=""></a></li>
+                        <li><a href="contact.html"><img src="../img/contact-tag.png" alt=""></a></li>
+                        <li><a href="faqs.html"><img src="../img/faqs-tag.png" alt=""></a></li>
+                        <li><a href="events.html"><img src="../img/events-tag.png" alt=""></a></li>
+                    </ul>
+                </span>
+
+                <a href="account.html" class="navBar__tag"><img src="../img/account-tag.png" alt=""></a>
+                <a href="cart.html" class="navBar__tag"><img src="../img/cart-tag.png" alt=""></a>
+            </div>
+        </div>
+
+
     </header>
 
-    <hr>
+    <section class="marqueeText"><span>2021 collection just released - worldwide shipping</span></section>
     
     <nav class="navMenu" id="hamMenu">
     
@@ -75,31 +102,50 @@
             <li>+549-xxx-xxxxxx</li>
         </ul>
 
-        <img src="../img/logobnw.png" alt="" id="footMark">
+        <img src="../img/logobnw.png" alt="" id="footmark">
 
     </nav>
 
     <main class="borderBox">
 
-        <h1 class="pageTitle">about us</h1>
+        <h1>about us</h1>
 
     </main> 
 
-    <hr>
-
     <footer>
-        <a href="privacy.html">Privacy policy</a><br>
-        <a href="termsnconds.html">Terms & Conditions</a>
 
+        <div class="links">
+            <ul>
+                <li><a href="login.html">Sign In</a>|<a href="register.html">Sign Up</a></li>
+                <li><a href="account.html">My Account</a></li>
+                <li><a href="account.html">My Cart</a></li>
 
-        <div>
+                <li><a href="faqs.html">FAQ'S</a></li>
+                <li><a href="events.html">Events</a></li>
+
+                <li>© 2021 DONTFLYBABY</li>
+                <li><a href="privacy.html">Privacy policy</a></li>
+                <li><a href="termsnconds.html">Terms & Conditions</a></li>
+                <a href="../index.html"><img src="../img/logobnw.png" alt="" class="footmark"></a>
+            </ul>
+        </div>
+
+        <div class="contact">
+            <ul>
+                <a href="contact.html">Contact</a></li>
+                <li>contact@dfb.com</li>
+                <li>+549341579731</li>
+                <li>Hours -> (Mon - Fri) 8:00 - 16:00 (GMT-3)</li>
+            </ul>
+            
             <a href="https://wa.me/5493382579731" target="_blank"><img src="../img/wapp.png" alt="whatsapp chat link" class="icon"></a>
             <a href="https://www.facebook.com/XXXXXX" target="_blank"><img src="../img/fb.png" alt="facebook page" class="icon"></a>
-            <a href="https://www.instagram.com/XXXXXX" target="_blank"><img src="../img/ig.png" alt="instagram profile" class="icon"> </a>
+            <a href="https://www.instagram.com/XXXXXX" target="_blank"><img src="../img/ig.png" alt="instagram profile" class="icon"></a>
         </div>
+        
     </footer>
 
-
+    <a href="#" id="up">&uarr;</a>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>

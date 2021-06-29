@@ -18,40 +18,88 @@ form.search {
         transition: .3s;
         width: 177px;
     }
-
-
-
 }
 
 // FORMULARIO DE CONTACTO
-    #textInputs input, #textInputs textarea, #reason {
-        font-size: 1.6rem;
-        background: black;
-        color: whitesmoke;
-        padding: 2px;
-        width: 80%;
+
+.contactPageMain {
+
+    padding: 2rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    .contactForm { 
+
+        span { // espaciado entre inputs
+            display: block;
+            margin: 10px 0;
+        }
+
+
+        #contactForm__reason, #contactForm__textInputs input, #contactForm__textInputs textarea {
+            border: solid .2rem rgb(71, 71, 71);            
+            font-size: 1.6rem;
+            background: whitesmoke;
+            color: black;
+            padding: .2rem;
+            width: 100%;
+
+            &:active {
+                border-radius: 0;
+            }
+        }
+
+        #contactForm__reason:invalid{ color: gray;  } /*estilo de placeholder para select*/
+
+        textarea {
+            height: 6rem;
+            resize: none;
+            font-family: inherit;
+            height: 10rem;
+        }
+
+        #contactForm__checkAndButtons{
+
+            label, input {
+                font-size: 1.6rem;
+                font-weight: 400;
+                border: none;
+                color: black;
+                padding: .2rem;
+            }
+
+            span {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: center;
+
+                input {
+                    border: solid .2rem rgb(71,71,71);
+                    width: 15%;
+                    margin: 0 .5rem;
+                    &:active {
+                        background: map-get($palette, mydarkred);
+                    }
+                }
+
+                #send {
+                    &:active {
+                        background: map-get($palette, mydarkred);
+                    }
+                }
+            }
+        }    
     }
 
-    #reason:invalid{ color: gray;  } /*estilo de placeholder para select*/
-
-    textarea {
-        height: 6rem;
-        resize: none;
-        font-family: inherit;
-        height: 10rem;
+    .locationMap {
+        width: 100%;
+        padding: .2rem;
+        iframe {
+            width: 100%;
+        }
     }
+}
 
-    #checkAndButtons label, #checkAndButtons input {
-        font-size: 1.6rem;
-        font-weight: 400;
-        background: black;
-        border: none;
-        color: whitesmoke;
-        padding: 2px;
-    }    
-
-    .contactForm span { /*espaciado entre inputs*/
-        display: block;
-        margin: 10px 0;
-    }
 //

@@ -1,25 +1,30 @@
 @import "mixins";
 
 h1 {
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
-    font-weight: 900;
-    font-size: 4rem;
-    color: map-get($palette, mygreen );
-    text-shadow: 2px 2px 0 map-get($palette, myyellow);
+    font-weight: 300;
+    font-size: 3.5rem;
+    /* color: map-get($palette, mygreen );
+    text-shadow: 2px 2px 0 map-get($palette, myyellow); */
+    color: black;
+    display: block;
+    height: fit-content;
     padding: .2rem .5rem;
-    text-transform: uppercase;
+    text-transform: capitalize;
+    border-bottom: solid .3rem map-get($palette, myred );
 }
 
 h2 {
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 2rem;
-    color: map-get($palette, mygreen );
+    color: black;
     padding: .2rem;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
-/* TEXTOS LARGOS */
+// TEXTOS LARGOS
 .extenseText {
     padding: 0 8px;
     color: rgb(15, 15, 15);
@@ -33,8 +38,18 @@ h2 {
         padding: 3px 0;
 
         &::selection, .extenseText li::selection {
-            background-color: rgb(241, 0, 50);
+            background-color: map-get($palette, myred );
         }
     
     }
+}
+
+// TEXTO FOOTER
+footer {
+    font-size: 1.2rem;
+}
+
+// TEXTO NEWLETTER HOME
+form#homeNewsletter {
+    font-size: 1.8rem;
 }
