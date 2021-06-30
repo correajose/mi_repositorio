@@ -107,119 +107,577 @@
 
             <div class="productView" id="ts#1">
                 <span id="itemPic">
-                    <img src="../img/tshirts/1.jpg" alt="">
+                    <img src="../img/tshirts/1.png" alt="">
                 </span>
                 
                 <span id="itemData">
-                    <p>color logo white background</p>
-                    <p>$1900,00</p>
+                    <h2>color logo white background</h2>
+                    <h3>$1900,00</h3>
                 </span>
 
                 <div id="purchaseInterface">
-        
-                    <label for="sizes">size</label>
+                    
+                    <form action="../php/productPreferences.php" method="GET" enctype="" required>
 
-                    <form action="../php/productPreferences.php" method="GET" enctype="" id="sizes" required>
-        
-                        <label for="s">S</label><input type="radio" name="sizes" id="s">
-                        <label for="m">M</label><input type="radio" name="sizes" id="m">
-                        <label for="l">L</label><input type="radio" name="sizes" id="l">
-                        <label for="xl">XL</label><input type="radio" name="sizes" id="xl">
-        
-                        <label for="qnty">quantity</label>
-                        <select id="quantity" name="qnty" required>
-                            <option value="" hidden>0</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            <option value="12">12</option>
-                            <option value="13">13</option>
-                            <option value="14">14</option>
-                            <option value="15">15</option>
+                        <label for="sizes" id="sizeTag">size_</label>
+                        <select name="sizes" required>
+                            <option value="" hidden>-</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
                         </select>
+                        
+                        
+                        <div>
+                            <label for="qntty" id="quantity">quantity_</label>
+                            <select name="qntty" required>
+                                <option value="" hidden>0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                            </select>
+                        </div>
 
-                        <div class="row">
-                            <input type="submit" value="add to cart" name="addCart" class="col-xs-3" id="addCart">
-                            <input type="submit" value="buy" name="buy" class="col-xs-3" id="buy">
+                        <div>
+                            <input type="submit" value="add to cart" name="addCart" id="addCart">
+                            <input type="submit" value="buy" name="buy" id="buy">
                         </div>
         
                     </form>
                     
                     <span id="description">
                         <h4>Description</h4>
-                        <p>100% cotton fabric. Crewneck. Silkscreen print. Oversized fit.</p>
+                        <p>100% cotton fabric. Crewneck. Silkscreen print. Oversize fit.</p>
                     </span>
+
+                                
         
-                </div>    
+                </div> 
+                
+                
+            </div>
+
+            <div class="productView" id="ts#2">
+                <span id="itemPic">
+                    <img src="../img/tshirts/2.png" alt="">
+                </span>
+                
+                <span id="itemData">
+                    <h2>b&w logo light blue background</h2>
+                    <h3>$1900,00</h3>
+                </span>
+
+                <div id="purchaseInterface">
+                    
+                    <form action="../php/productPreferences.php" method="GET" enctype="" required>
+
+                        <label for="sizes" id="sizeTag">size_</label>
+                        <select name="sizes" required>
+                            <option value="" hidden>-</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                        
+                        
+                        <div>
+                            <label for="qntty" id="quantity">quantity_</label>
+                            <select name="qntty" required>
+                                <option value="" hidden>0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <input type="submit" value="add to cart" name="addCart" id="addCart">
+                            <input type="submit" value="buy" name="buy" id="buy">
+                        </div>
+        
+                    </form>
+                    
+                    <span id="description">
+                        <h4>Description</h4>
+                        <p>100% cotton fabric. Crewneck. Silkscreen print. Oversize fit.</p>
+                    </span>
+
+                                
+        
+                </div> 
+                
+                
+            </div>
+
+            <div class="productView" id="ts#3">
+                <span id="itemPic">
+                    <img src="../img/tshirts/3.png" alt="">
+                </span>
+                
+                <span id="itemData">
+                    <h2>shell on a dark grey background</h2>
+                    <h3>$1900,00</h3>
+                </span>
+
+                <div id="purchaseInterface">
+                    
+                    <form action="../php/productPreferences.php" method="GET" enctype="" required>
+
+                        <label for="sizes" id="sizeTag">size_</label>
+                        <select name="sizes" required>
+                            <option value="" hidden>-</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                        
+                        
+                        <div>
+                            <label for="qntty" id="quantity">quantity_</label>
+                            <select name="qntty" required>
+                                <option value="" hidden>0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <input type="submit" value="add to cart" name="addCart" id="addCart">
+                            <input type="submit" value="buy" name="buy" id="buy">
+                        </div>
+        
+                    </form>
+                    
+                    <span id="description">
+                        <h4>Description</h4>
+                        <p>100% cotton fabric. Crewneck. Silkscreen print. Oversize fit.</p>
+                    </span>
+
+                                
+        
+                </div> 
+                
+            </div>
+
+            <div class="productView" id="ts#4">
+                <span id="itemPic">
+                    <img src="../img/tshirts/4.png" alt="">
+                </span>
+                
+                <span id="itemData">
+                    <h2>4 variants on a black background</h2>
+                    <h3>$1900,00</h3>
+                </span>
+
+                <div id="purchaseInterface">
+                    
+                    <form action="../php/productPreferences.php" method="GET" enctype="" required>
+
+                        <label for="sizes" id="sizeTag">size_</label>
+                        <select name="sizes" required>
+                            <option value="" hidden>-</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                        
+                        
+                        <div>
+                            <label for="qntty" id="quantity">quantity_</label>
+                            <select name="qntty" required>
+                                <option value="" hidden>0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <input type="submit" value="add to cart" name="addCart" id="addCart">
+                            <input type="submit" value="buy" name="buy" id="buy">
+                        </div>
+        
+                    </form>
+                    
+                    <span id="description">
+                        <h4>Description</h4>
+                        <p>100% cotton fabric. Crewneck. Silkscreen print. Oversize fit.</p>
+                    </span>
+
+                                
+        
+                </div> 
+                
+            </div>
+
+            <div class="productView" id="ts#5">
+                <span id="itemPic">
+                    <img src="../img/tshirts/5.png" alt="">
+                </span>
+                
+                <span id="itemData">
+                    <h2>dark church</h2>
+                    <h3>$1900,00</h3>
+                </span>
+
+                <div id="purchaseInterface">
+                    
+                    <form action="../php/productPreferences.php" method="GET" enctype="" required>
+
+                        <label for="sizes" id="sizeTag">size_</label>
+                        <select name="sizes" required>
+                            <option value="" hidden>-</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                        
+                        
+                        <div>
+                            <label for="qntty" id="quantity">quantity_</label>
+                            <select name="qntty" required>
+                                <option value="" hidden>0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <input type="submit" value="add to cart" name="addCart" id="addCart">
+                            <input type="submit" value="buy" name="buy" id="buy">
+                        </div>
+        
+                    </form>
+                    
+                    <span id="description">
+                        <h4>Description</h4>
+                        <p>100% cotton fabric. Crewneck. Silkscreen print. Oversize fit.</p>
+                    </span>
+
+                                
+        
+                </div> 
+                
+            </div>
+
+            <div class="productView" id="ts#6">
+                <span id="itemPic">
+                    <img src="../img/tshirts/6.png" alt="">
+                </span>
+                
+                <span id="itemData">
+                    <h2>sailing light yellow backgroud</h2>
+                    <h3>$1900,00</h3>
+                </span>
+
+                <div id="purchaseInterface">
+                    
+                    <form action="../php/productPreferences.php" method="GET" enctype="" required>
+
+                        <label for="sizes" id="sizeTag">size_</label>
+                        <select name="sizes" required>
+                            <option value="" hidden>-</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                        
+                        
+                        <div>
+                            <label for="qntty" id="quantity">quantity_</label>
+                            <select name="qntty" required>
+                                <option value="" hidden>0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <input type="submit" value="add to cart" name="addCart" id="addCart">
+                            <input type="submit" value="buy" name="buy" id="buy">
+                        </div>
+        
+                    </form>
+                    
+                    <span id="description">
+                        <h4>Description</h4>
+                        <p>100% cotton fabric. Crewneck. Silkscreen print. Oversize fit.</p>
+                    </span>
+
+                                
+        
+                </div> 
+                
+            </div>
+            
+
+            <div class="productView" id="ts#7">
+                <span id="itemPic">
+                    <img src="../img/tshirts/7.png" alt="">
+                </span>
+                
+                <span id="itemData">
+                    <h2>black inscription on a white background</h2>
+                    <h3>$1900,00</h3>
+                </span>
+
+                <div id="purchaseInterface">
+                    
+                    <form action="../php/productPreferences.php" method="GET" enctype="" required>
+
+                        <label for="sizes" id="sizeTag">size_</label>
+                        <select name="sizes" required>
+                            <option value="" hidden>-</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                        
+                        
+                        <div>
+                            <label for="qntty" id="quantity">quantity_</label>
+                            <select name="qntty" required>
+                                <option value="" hidden>0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <input type="submit" value="add to cart" name="addCart" id="addCart">
+                            <input type="submit" value="buy" name="buy" id="buy">
+                        </div>
+        
+                    </form>
+                    
+                    <span id="description">
+                        <h4>Description</h4>
+                        <p>100% cotton fabric. Crewneck. Silkscreen print. Oversize fit.</p>
+                    </span>
+
+                                
+        
+                </div> 
                 
             </div>
 
 
-        <!-- <table class="sizesTable">
-
-                <thead>
-                    <tr>
-                        <th colspan="6">sizes table [cm]</th>
-                    </tr>
+            <div class="productView" id="ts#8">
+                <span id="itemPic">
+                    <img src="../img/tshirts/8.png" alt="">
+                </span>
                 
-                    <tr>
-                        <th></th>
-                        <th scope="col">length</th>
-                        <th scope="col">width</th>
-                        <th scope="col">shoulders</th>
-                        <th scope="col">chest</th>
-                        <th scope="col">sleeve</th>
-                    </tr>
-                </thead>
+                <span id="itemData">
+                    <h2>light church</h2>
+                    <h3>$1900,00</h3>
+                </span>
+
+                <div id="purchaseInterface">
+                    
+                    <form action="../php/productPreferences.php" method="GET" enctype="" required>
+
+                        <label for="sizes" id="sizeTag">size_</label>
+                        <select name="sizes" required>
+                            <option value="" hidden>-</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                        
+                        
+                        <div>
+                            <label for="qntty" id="quantity">quantity_</label>
+                            <select name="qntty" required>
+                                <option value="" hidden>0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <input type="submit" value="add to cart" name="addCart" id="addCart">
+                            <input type="submit" value="buy" name="buy" id="buy">
+                        </div>
+        
+                    </form>
+                    
+                    <span id="description">
+                        <h4>Description</h4>
+                        <p>100% cotton fabric. Crewneck. Silkscreen print. Oversize fit.</p>
+                    </span>
+
+                                
+        
+                </div> 
                 
-                <tbody>
-                    <tr>
-                        <th scope="row">M</th>
-                        <td>68</td>
-                        <td>42</td>
-                        <td>45</td>
-                        <td>40</td>
-                        <td>18</td>
-                    </tr>
+            </div>
+            <!-- <table class="sizesTable">
 
-                    <tr>
-                        <th scope="row">L</th>
-                        <td>71</td>
-                        <td>44</td>
-                        <td>46</td>
-                        <td>41</td>
-                        <td>19</td>
-                    </tr>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="6">sizes table [cm]</th>
+                                        </tr>
+                                    
+                                        <tr>
+                                            <th></th>
+                                            <th scope="col">length</th>
+                                            <th scope="col">width</th>
+                                            <th scope="col">shoulders</th>
+                                            <th scope="col">chest</th>
+                                            <th scope="col">sleeve</th>
+                                        </tr>
+                                    </thead>
+                                    
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">M</th>
+                                            <td>68</td>
+                                            <td>42</td>
+                                            <td>45</td>
+                                            <td>40</td>
+                                            <td>18</td>
+                                        </tr>
 
-                    <tr>
-                        <th scope="row">XL</th>
-                        <td>73</td>
-                        <td>46</td>
-                        <td>48</td>
-                        <td>44</td>
-                        <td>20</td>
-                    </tr>
+                                        <tr>
+                                            <th scope="row">L</th>
+                                            <td>71</td>
+                                            <td>44</td>
+                                            <td>46</td>
+                                            <td>41</td>
+                                            <td>19</td>
+                                        </tr>
 
-                    <tr>
-                        <th scope="row">XXL</th>
-                        <td>75</td>
-                        <td>48</td>
-                        <td>50</td>
-                        <td>45</td>
-                        <td>20</td>
-                    </tr>
-                </tbody>
-            </table> -->
+                                        <tr>
+                                            <th scope="row">XL</th>
+                                            <td>73</td>
+                                            <td>46</td>
+                                            <td>48</td>
+                                            <td>44</td>
+                                            <td>20</td>
+                                        </tr>
 
-    </main class="borderBox">
+                                        <tr>
+                                            <th scope="row">XXL</th>
+                                            <td>75</td>
+                                            <td>48</td>
+                                            <td>50</td>
+                                            <td>45</td>
+                                            <td>20</td>
+                                        </tr>
+                                    </tbody>
+                                </table> -->
+        
+
+    </main>
 
     <footer>
 

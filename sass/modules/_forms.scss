@@ -51,7 +51,7 @@ form.search {
             }
         }
 
-        #contactForm__reason:invalid{ color: gray;  } /*estilo de placeholder para select*/
+        #contactForm__reason:invalid{ color: gray; /*estilo de placeholder para select*/ } 
 
         textarea {
             height: 6rem;

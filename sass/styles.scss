@@ -436,8 +436,6 @@ a {
                     list-style: none;
                     margin: 1rem 0;
                     width: 100%;
-                    
-                    
                 }
             
             background-color: whitesmoke;
@@ -445,6 +443,12 @@ a {
             border-bottom: solid .2rem rgb(71,71,71);
             padding: .8rem 15rem .8rem 2rem;
 
+
+        }
+
+        ul.navBar__list {
+            @extend .navBar__infoMenu;
+            left: 14rem;
 
         }
 
@@ -509,24 +513,45 @@ a {
             grid-template: auto auto / 50% 50%;
             grid-template-areas: "pic data"
                                  "pic intfc";
-            gap: 2rem;
+            column-gap: 2rem;
+            
             
             #itemPic {
                 grid-area: pic;
-                
+                justify-self: center;
+                display: flex;
+                justify-content: center;
                 img {
-                    width: 100%;
-                }
+                    width: 80%;
+                }   
             } 
 
             span#itemData {
                 grid-area: data;
+                margin-top: 2rem;
+                padding-bottom: 3rem;
+                justify-self: left;
+                align-self: flex-end;
+                width: 100%;
+                border-bottom: solid .1rem rgb(71,71,71);
             }
 
             div#purchaseInterface {
                 grid-area: intfc;
-                display: flex;
-                justify-content: left;
+                justify-self: left;
+
+                form {
+                    padding: 3rem 0;
+                }
+
+                input {
+                    margin: 1rem 0 0;
+                }
+
+                #description {
+                    padding-top: 3rem;
+                    border-top: solid .1rem rgb(71,71,71);
+                }
             }
 
                 

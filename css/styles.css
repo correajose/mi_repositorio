@@ -48,45 +48,44 @@ form.search {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center; }
-  .contactPageMain .contactForm {
+  .contactPageMain .contactForm span {
+    display: block;
+    margin: 10px 0; }
+  .contactPageMain .contactForm #contactForm__reason, .contactPageMain .contactForm #contactForm__textInputs input, .contactPageMain .contactForm #contactForm__textInputs textarea {
+    border: solid 0.2rem #474747;
+    font-size: 1.6rem;
+    background: whitesmoke;
+    color: black;
+    padding: .2rem;
+    width: 100%; }
+    .contactPageMain .contactForm #contactForm__reason:active, .contactPageMain .contactForm #contactForm__textInputs input:active, .contactPageMain .contactForm #contactForm__textInputs textarea:active {
+      border-radius: 0; }
+  .contactPageMain .contactForm #contactForm__reason:invalid {
+    color: gray;
     /*estilo de placeholder para select*/ }
-    .contactPageMain .contactForm span {
-      display: block;
-      margin: 10px 0; }
-    .contactPageMain .contactForm #contactForm__reason, .contactPageMain .contactForm #contactForm__textInputs input, .contactPageMain .contactForm #contactForm__textInputs textarea {
+  .contactPageMain .contactForm textarea {
+    height: 6rem;
+    resize: none;
+    font-family: inherit;
+    height: 10rem; }
+  .contactPageMain .contactForm #contactForm__checkAndButtons label, .contactPageMain .contactForm #contactForm__checkAndButtons input {
+    font-size: 1.6rem;
+    font-weight: 400;
+    border: none;
+    color: black;
+    padding: .2rem; }
+  .contactPageMain .contactForm #contactForm__checkAndButtons span {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center; }
+    .contactPageMain .contactForm #contactForm__checkAndButtons span input {
       border: solid 0.2rem #474747;
-      font-size: 1.6rem;
-      background: whitesmoke;
-      color: black;
-      padding: .2rem;
-      width: 100%; }
-      .contactPageMain .contactForm #contactForm__reason:active, .contactPageMain .contactForm #contactForm__textInputs input:active, .contactPageMain .contactForm #contactForm__textInputs textarea:active {
-        border-radius: 0; }
-    .contactPageMain .contactForm #contactForm__reason:invalid {
-      color: gray; }
-    .contactPageMain .contactForm textarea {
-      height: 6rem;
-      resize: none;
-      font-family: inherit;
-      height: 10rem; }
-    .contactPageMain .contactForm #contactForm__checkAndButtons label, .contactPageMain .contactForm #contactForm__checkAndButtons input {
-      font-size: 1.6rem;
-      font-weight: 400;
-      border: none;
-      color: black;
-      padding: .2rem; }
-    .contactPageMain .contactForm #contactForm__checkAndButtons span {
-      display: flex;
-      flex-flow: row nowrap;
-      justify-content: center; }
-      .contactPageMain .contactForm #contactForm__checkAndButtons span input {
-        border: solid 0.2rem #474747;
-        width: 15%;
-        margin: 0 .5rem; }
-        .contactPageMain .contactForm #contactForm__checkAndButtons span input:active {
-          background: #c9196e; }
-      .contactPageMain .contactForm #contactForm__checkAndButtons span #send:active {
+      width: 15%;
+      margin: 0 .5rem; }
+      .contactPageMain .contactForm #contactForm__checkAndButtons span input:active {
         background: #c9196e; }
+    .contactPageMain .contactForm #contactForm__checkAndButtons span #send:active {
+      background: #c9196e; }
   .contactPageMain .locationMap {
     width: 100%;
     padding: .2rem; }
@@ -225,7 +224,7 @@ main {
     color: #1DE284;
     font-size: 2rem;
     font-weight: 900;
-    text-shadow: 2px 2px 0 #DEE21D; }
+    text-shadow: 2px 2px 0 #13130e; }
     .navMenu .navMenu__list li {
       padding: .5rem 0;
       width: 100%;
@@ -423,7 +422,7 @@ section#tshirts .product__grid, section#tops .product__grid, section#pants .prod
       font-size: 1.6rem;
       color: #1b1b1b; }
     section#tshirts .product__grid .product__grid__itemViewBox .button--green, section#tops .product__grid .product__grid__itemViewBox .button--green, section#pants .product__grid .product__grid__itemViewBox .button--green, section#accs .product__grid .product__grid__itemViewBox .button--green {
-      background-color: #DEE21D; }
+      background-color: #13130e; }
 
 /* PAGINA PRODUCT VIEW */
 #productViewPageMain {
@@ -434,40 +433,56 @@ section#tshirts .product__grid, section#tops .product__grid, section#pants .prod
   flex-flow: column nowrap;
   justify-items: center;
   align-items: center;
-  padding: 3.5rem; }
+  padding: 3.5rem 0; }
   #productViewPageMain div.productView {
     display: none; }
     #productViewPageMain div.productView:target {
       display: grid; }
     #productViewPageMain div.productView span#itemData {
       height: fit-content;
-      font-weight: 500;
-      font-size: 3rem;
       text-transform: capitalize; }
+      #productViewPageMain div.productView span#itemData h2 {
+        font-size: 3rem; }
+      #productViewPageMain div.productView span#itemData h3 {
+        font-size: 2.5rem;
+        font-weight: 900; }
     #productViewPageMain div.productView #purchaseInterface {
-      padding-top: 25px;
       width: 100%;
-      display: flex;
-      flex-flow: column nowrap;
-      align-items: left; }
+      /* display: flex;
+            flex-flow: column nowrap;
+            align-items: left; */ }
+      #productViewPageMain div.productView #purchaseInterface select {
+        border-radius: 0;
+        border: solid 0.2rem #474747;
+        background-color: whitesmoke;
+        color: #474747; }
+        #productViewPageMain div.productView #purchaseInterface select:focus {
+          border-radius: 0; }
       #productViewPageMain div.productView #purchaseInterface label {
         width: fit-content;
         font-weight: 400;
-        font-size: 1.6rem;
+        font-size: 2rem;
         color: #474747;
-        padding: 3px; }
+        padding: 0 3px;
+        width: 12%; }
       #productViewPageMain div.productView #purchaseInterface input {
         font-weight: 400;
-        font-size: 1.6rem;
+        font-size: 2.3rem;
         color: #474747;
         padding: .2rem .8rem;
         border: solid 0.2rem #474747; }
       #productViewPageMain div.productView #purchaseInterface input#buy {
-        background-color: #1DE284; }
+        background-color: #1DE284;
+        margin-left: 1rem; }
+        #productViewPageMain div.productView #purchaseInterface input#buy:active {
+          background-color: #17af66; }
+      #productViewPageMain div.productView #purchaseInterface input#addCart:active {
+        background-color: #dfdfdf; }
       #productViewPageMain div.productView #purchaseInterface #description {
+        display: inline-block;
+        width: 100%;
         font-size: 1.6rem;
-        background-color: rgba(245, 245, 245, 0.87);
-        padding: 3px;
+        background-color: whitesmoke;
         text-align: justify; }
 
 html {
@@ -727,16 +742,18 @@ a {
       .navBar .navBar__tag:active {
         border-right: solid 0.2rem #474747;
         border-bottom: solid 0.2rem #474747; }
-    .navBar ul.navBar__infoMenu {
+    .navBar ul.navBar__infoMenu, .navBar ul.navBar__list {
       position: absolute;
       background-color: whitesmoke;
       border-right: solid 0.2rem #474747;
       border-bottom: solid 0.2rem #474747;
       padding: .8rem 15rem .8rem 2rem; }
-      .navBar ul.navBar__infoMenu li {
+      .navBar ul.navBar__infoMenu li, .navBar ul.navBar__list li {
         list-style: none;
         margin: 1rem 0;
         width: 100%; }
+    .navBar ul.navBar__list {
+      left: 14rem; }
     .navBar a.collapsed span#arrowup {
       display: none; }
     .navBar a.collapsed span#arrowdw {
@@ -771,17 +788,32 @@ a {
     height: 100%;
     grid-template: auto auto / 50% 50%;
     grid-template-areas: "pic data" "pic intfc";
-    gap: 2rem; }
+    column-gap: 2rem; }
     #productViewPageMain .productView #itemPic {
-      grid-area: pic; }
+      grid-area: pic;
+      justify-self: center;
+      display: flex;
+      justify-content: center; }
       #productViewPageMain .productView #itemPic img {
-        width: 100%; }
+        width: 80%; }
     #productViewPageMain .productView span#itemData {
-      grid-area: data; }
+      grid-area: data;
+      margin-top: 2rem;
+      padding-bottom: 3rem;
+      justify-self: left;
+      align-self: flex-end;
+      width: 100%;
+      border-bottom: solid 0.1rem #474747; }
     #productViewPageMain .productView div#purchaseInterface {
       grid-area: intfc;
-      display: flex;
-      justify-content: left; }
+      justify-self: left; }
+      #productViewPageMain .productView div#purchaseInterface form {
+        padding: 3rem 0; }
+      #productViewPageMain .productView div#purchaseInterface input {
+        margin: 1rem 0 0; }
+      #productViewPageMain .productView div#purchaseInterface #description {
+        padding-top: 3rem;
+        border-top: solid 0.1rem #474747; }
   .contactPageMain {
     flex-flow: row nowrap;
     justify-content: center;
