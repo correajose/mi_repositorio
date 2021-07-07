@@ -36,21 +36,34 @@ section#tshirts, section#tops, section#pants, section#accs {
                 font-weight: 500;
                 font-style: italic;
                 font-size: 1.6rem;
+                text-transform: capitalize;
                 color: rgb(27, 27, 27);
                 margin: .5rem 0;
             }
 
             .product__grid__itemViewBox__price {
                 display: inline-block;
-                font-weight: 500;
+                margin-right: 2rem;
+                font-weight: 900;
                 font-style: italic;
                 font-size: 1.6rem;
                 color: rgb(27, 27, 27);
             }
 
-            .button--green {
-               background-color: map-get($palette,myyellow);
-           }
+            .button--buy {
+                background-color: map-get($palette, mygreen );
+                font-weight: 500;
+
+                &:active {
+                    background-color: map-get($palette, mydarkgreen );
+                }
+            }
+
+            .button--cart:active {
+                
+                    background-color: rgb(190, 190, 190);
+                
+            }
             
         }
     }

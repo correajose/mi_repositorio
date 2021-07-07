@@ -27,12 +27,6 @@ html {
 
 hr { display: none;}
 
-button {
-    background: unset;
-    border: unset;
-    color: unset;
-    align-content: center;
-}
 
 a { 
     color: inherit;
@@ -394,6 +388,10 @@ a {
             text-align: center;
         }
 
+        a:hover {
+            text-decoration: underline;
+        }
+
         ul {
             list-style: none;
         }
@@ -495,10 +493,16 @@ a {
 
                     .tshirts__grid__itemViewBox__price {
 
-                    }
+                    }*/
 
-                    .button {
-                    } */
+                    .button--buy {
+                        background-color: map-get($palette, mygreen );
+                        font-weight: 500;
+
+                        &:active {
+                            background-color: map-get($palette, mydarkgreen );
+                        }
+                    }
             }
         }
             

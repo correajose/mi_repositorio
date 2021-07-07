@@ -1,14 +1,13 @@
 @mixin button {
     display: inline-block;
     text-decoration: none;
-    padding: .2rem .1rem;
-    border: .3rem outset;
+    padding: .2rem .5rem;
+    border: solid .2rem rgb(71,71,71);
 }
 
 $palette: (
     mygreen: #1DE284,
     mydarkgreen: #17af66,
-    myyellow: #13130e,
     myblue: #211DE2,
     mydarkblue: #100f7a,
     myred: #E21D7B,
